@@ -32,43 +32,45 @@ export function HowToInvestSection() {
   return (
     <section
       id="how-to-invest"
-      className="w-full bg-[#27382a] px-[182px] py-[110px]"
+      className="w-full bg-sh-forest-deep px-section-x py-27.5"
     >
-      <div className="flex flex-col gap-[52px]">
+      <div className="flex flex-col gap-13">
         {/* Section Header */}
-        <div className="flex flex-col gap-[26px]">
-          <p className="sh-label text-[#f7f5ee]">How to invest</p>
-          <h2 className="sh-headline-md text-[#f7f5ee]">
+        <div className="flex flex-col gap-6.5">
+          <p className="sh-label text-sh-cream">How to invest</p>
+          <h2 className="sh-headline-md text-sh-cream">
             Ready to take the next step?
           </h2>
-          <p className="sh-body-md text-[#f7f5ee]">
+          <p className="sh-body-md text-sh-cream">
             A clear path forward, with a conversation whenever you need one.
           </p>
         </div>
 
         {/* Step Cards */}
-        <div className="flex h-[420px] gap-6">
+        <div className="flex h-105 gap-6">
           {steps.map((step) => (
             <div
               key={step.number}
-              className="flex flex-1 flex-col justify-between rounded-[18px] bg-[#f7f5ee] p-[30px]"
+              className="flex flex-1 flex-col justify-between rounded-card bg-sh-cream p-7.5"
             >
               {/* Step Content */}
               <div className="flex flex-col gap-6">
                 {/* Step Number */}
-                <p className="text-[26px] text-[#3a503b]">{step.number}</p>
+                <p className="text-[26px] text-sh-sage">{step.number}</p>
 
                 {/* Step Title */}
-                <h3 className="sh-headline-sm text-[#3a503b]">{step.title}</h3>
+                <h3 className="sh-headline-sm text-sh-sage">{step.title}</h3>
 
                 {/* Step Description */}
-                <p className="sh-body-md text-[#36454f]">{step.description}</p>
+                <p className="sh-body-md text-sh-charcoal">
+                  {step.description}
+                </p>
               </div>
 
               {/* CTA Button */}
               <a
                 href={step.href}
-                className="sh-button sh-button-outline inline-flex w-fit border-[#3a503b] text-[#3a503b]"
+                className="sh-button sh-button-outline inline-flex w-fit border-sh-sage text-sh-sage"
               >
                 <span>{step.cta}</span>
                 {step.hasArrow && <span>→</span>}
@@ -78,7 +80,7 @@ export function HowToInvestSection() {
         </div>
 
         {/* Disclaimer */}
-        <p className="sh-body-xs text-[#f7f5ee]">
+        <p className="sh-body-xs text-sh-cream">
           The official offering documents govern the investment. Please review
           them carefully before making a commitment.
         </p>

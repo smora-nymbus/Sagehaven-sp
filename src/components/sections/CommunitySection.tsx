@@ -1,22 +1,22 @@
 export function CommunitySection() {
   return (
-    <section className="w-full bg-[#27382a] px-[182px] pb-[100px] pt-[120px]">
+    <section className="w-full bg-sh-forest-deep px-section-x pb-25 pt-section-y">
       <div className="flex flex-col gap-16">
         {/* Community Invitation */}
         <div className="flex flex-col items-center gap-7">
           {/* Label */}
-          <p className="sh-label text-[#f7f5ee]">Built around community</p>
+          <p className="sh-label text-sh-cream">Built around community</p>
 
           {/* Headline */}
-          <h2 className="sh-headline-lg w-[1000px] text-center text-[#f7f5ee]">
+          <h2 className="sh-headline-lg w-250 text-center text-sh-cream">
             Built for the community.
             <br />
             Inspired by what comes next.
           </h2>
 
           {/* Description */}
-          <div className="w-[760px] text-center">
-            <p className="text-[20px] leading-[1.6] text-[#f7f5ee]">
+          <div className="w-190 text-center">
+            <p className="text-[20px] leading-[1.6] text-sh-cream">
               Thank you for your interest in SageHaven Bancorp.
               <br />
               Take a closer look at what we're building, and the role you could
@@ -25,23 +25,20 @@ export function CommunitySection() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex gap-[14px] pt-3">
-            <a
-              href="#documents"
-              className="sh-button sh-button-primary"
-            >
+          <div className="flex gap-3.5 pt-3">
+            <a href="#documents" className="sh-button sh-button-primary">
               <span>Review offering documents</span>
               <span>→</span>
             </a>
             <a
               href="#fund"
-              className="sh-button sh-button-outline text-[#f7f5ee]"
+              className="sh-button sh-button-outline text-sh-cream"
             >
               Fund investment
             </a>
             <a
               href="#schedule"
-              className="sh-button sh-button-outline text-[#f7f5ee]"
+              className="sh-button sh-button-outline text-sh-cream"
             >
               Schedule a call
             </a>
@@ -49,7 +46,7 @@ export function CommunitySection() {
         </div>
 
         {/* Community Panorama */}
-        <div className="relative h-[400px] w-full overflow-hidden rounded-[32px]">
+        <div className="relative h-100 w-full overflow-hidden rounded-[32px]">
           <img
             src="/images/community-panorama.png"
             alt="Downtown Pittsburgh panorama"
