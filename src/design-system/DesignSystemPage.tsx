@@ -11,7 +11,7 @@ import {
 // Sample button components for preview
 function PrimaryButton() {
   return (
-    <button className="inline-flex items-center justify-center gap-[14px] h-[54px] px-7 rounded-full bg-[#f7f5ee] text-[#243829] text-base border border-[#f7f5ee] hover:bg-white transition-colors">
+    <button className="inline-flex items-center justify-center gap-3.5 h-13.5 px-7 rounded-full bg-sh-cream text-sh-forest text-base border border-sh-cream hover:bg-white transition-colors">
       <span>Review offering documents</span>
       <span>→</span>
     </button>
@@ -20,7 +20,7 @@ function PrimaryButton() {
 
 function OutlineButtonDark() {
   return (
-    <button className="inline-flex items-center justify-center h-[54px] px-7 rounded-full bg-transparent text-[#f7f5ee] text-base border border-[#f7f5ee] hover:bg-white/10 transition-colors">
+    <button className="inline-flex items-center justify-center h-13.5 px-7 rounded-full bg-transparent text-sh-cream text-base border border-sh-cream hover:bg-white/10 transition-colors">
       Fund your investment
     </button>
   );
@@ -28,7 +28,7 @@ function OutlineButtonDark() {
 
 function OutlineButtonLight() {
   return (
-    <button className="inline-flex items-center justify-center h-[54px] px-7 rounded-full bg-transparent text-[#243829] text-base border border-[#243829] hover:bg-black/5 transition-colors">
+    <button className="inline-flex items-center justify-center h-13.5 px-7 rounded-full bg-transparent text-sh-forest text-base border border-sh-forest hover:bg-black/5 transition-colors">
       Talk to the team
     </button>
   );
@@ -55,12 +55,12 @@ function ColorSwatch({
   return (
     <div className="flex flex-col cursor-pointer" onClick={handleCopy}>
       <div
-        className={`h-16 rounded-lg flex items-end p-2 ${textDark ? "text-[#243829]" : "text-[#f7f5ee]"} relative group`}
+        className={`h-16 rounded-lg flex items-end p-2 ${textDark ? "text-sh-forest" : "text-sh-cream"} relative group`}
         style={{ backgroundColor: hex }}
       >
         <span className="text-xs font-medium">{copied ? "Copied!" : hex}</span>
       </div>
-      <span className="text-sm text-[#36454f] mt-1">{name}</span>
+      <span className="text-sm text-sh-charcoal mt-1">{name}</span>
     </div>
   );
 }
@@ -69,19 +69,19 @@ function ColorSwatch({
 function TypographySample() {
   return (
     <div className="space-y-4 text-left">
-      <p className="font-serif text-[52px] leading-[1.08] text-[#243829]">
+      <p className="font-serif text-[52px] leading-[1.08] text-sh-forest">
         Times New Roman — Headlines
       </p>
-      <p className="text-[20px] leading-[1.52] text-[#36454f]">
+      <p className="text-[20px] leading-[1.52] text-sh-charcoal">
         Inter / System Sans — Body text at 20px with relaxed line height
       </p>
-      <p className="text-[18px] leading-[1.65] text-[#36454f]">
+      <p className="text-[18px] leading-[1.65] text-sh-charcoal">
         Body text at 18px — Used for descriptions and paragraph content
       </p>
-      <p className="text-[14px] uppercase tracking-[0.02em] text-[#243829]">
+      <p className="text-[14px] uppercase tracking-[0.02em] text-sh-forest">
         Labels — 14px uppercase with letter spacing
       </p>
-      <p className="text-[11px] uppercase tracking-[0.02em] text-[#8b6f3a]">
+      <p className="text-[11px] uppercase tracking-[0.02em] text-sh-gold">
         Small labels — 11px uppercase (footer navigation)
       </p>
     </div>
@@ -109,7 +109,7 @@ function AnimationDemo() {
         {["up", "down", "left", "right"].map((direction, index) => (
           <div
             key={`${key}-${direction}`}
-            className="w-16 h-16 bg-[#3a503b] rounded-[18px] flex items-center justify-center"
+            className="w-16 h-16 bg-sh-sage rounded-card flex items-center justify-center"
             style={{
               opacity: isPlaying ? 1 : 0,
               transform: isPlaying
@@ -124,16 +124,11 @@ function AnimationDemo() {
               transition: `opacity 0.5s ease-out ${index * 100}ms, transform 0.5s ease-out ${index * 100}ms`,
             }}
           >
-            <span className="text-[#f7f5ee] text-xs uppercase">
-              {direction}
-            </span>
+            <span className="text-sh-cream text-xs uppercase">{direction}</span>
           </div>
         ))}
       </div>
-      <button
-        onClick={replay}
-        className="text-sm text-[#3a503b] hover:underline"
-      >
+      <button onClick={replay} className="text-sm text-sh-sage hover:underline">
         ↻ Replay animation
       </button>
     </div>
@@ -204,7 +199,7 @@ function DownloadDropdown() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 bg-[#f7f5ee] text-[#243829] px-5 py-2.5 rounded-full font-medium text-sm hover:bg-white transition-colors"
+        className="flex items-center gap-2 bg-sh-cream text-sh-forest px-5 py-2.5 rounded-full font-medium text-sm hover:bg-white transition-colors"
         aria-expanded={isOpen}
         aria-haspopup="listbox"
       >
@@ -239,11 +234,11 @@ function DownloadDropdown() {
 
       {isOpen && (
         <div
-          className="absolute right-0 top-full mt-2 w-64 bg-white rounded-[18px] shadow-lg border border-[#e0e7dc] overflow-hidden z-50"
+          className="absolute right-0 top-full mt-2 w-64 bg-white rounded-card shadow-lg border border-sh-sage-light overflow-hidden z-50"
           role="listbox"
         >
-          <div className="p-3 border-b border-[#e0e7dc]">
-            <span className="text-xs text-[#36454f] uppercase tracking-wide">
+          <div className="p-3 border-b border-sh-sage-light">
+            <span className="text-xs text-sh-charcoal uppercase tracking-wide">
               Download Assets
             </span>
           </div>
@@ -254,13 +249,13 @@ function DownloadDropdown() {
                 option.action();
                 setIsOpen(false);
               }}
-              className="w-full px-4 py-3 text-left hover:bg-[#e0e7dc]/50 transition-colors flex flex-col gap-0.5"
+              className="w-full px-4 py-3 text-left hover:bg-sh-sage-light/50 transition-colors flex flex-col gap-0.5"
               role="option"
             >
-              <span className="text-sm font-medium text-[#243829]">
+              <span className="text-sm font-medium text-sh-forest">
                 {option.label}
               </span>
-              <span className="text-xs text-[#36454f]">
+              <span className="text-xs text-sh-charcoal">
                 {option.description}
               </span>
             </button>
@@ -284,7 +279,7 @@ function AssetPreview({
   return (
     <div className="flex flex-col items-center gap-2">
       <div
-        className={`w-24 h-24 ${bgDark ? "bg-[#243829]" : "bg-[#f7f5ee]"} rounded-[18px] flex items-center justify-center p-3 border border-[#e0e7dc]`}
+        className={`w-24 h-24 ${bgDark ? "bg-sh-forest" : "bg-sh-cream"} rounded-card flex items-center justify-center p-3 border border-sh-sage-light`}
       >
         <img
           src={path}
@@ -292,22 +287,22 @@ function AssetPreview({
           className="max-w-full max-h-full object-contain"
         />
       </div>
-      <span className="text-xs text-[#36454f] text-center">{name}</span>
+      <span className="text-xs text-sh-charcoal text-center">{name}</span>
     </div>
   );
 }
 
 export function DesignSystemPage() {
   return (
-    <div className="min-h-screen bg-[#f7f5ee]">
+    <div className="min-h-screen bg-sh-cream">
       {/* Header */}
-      <header className="bg-[#243829] text-[#f7f5ee] py-16 px-5 sm:px-10 md:px-16 lg:px-20">
+      <header className="bg-sh-forest text-sh-cream py-16 px-5 sm:px-10 md:px-16 lg:px-20">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
           <div>
             <h1 className="font-serif text-4xl md:text-5xl">
               SageHaven Bancorp Design System
             </h1>
-            <p className="text-lg text-[#f7f5ee]/70 mt-3">
+            <p className="text-lg text-sh-cream/70 mt-3">
               Component library and design tokens for consistent brand
               implementation
             </p>
@@ -319,13 +314,13 @@ export function DesignSystemPage() {
       <main className="max-w-7xl mx-auto px-5 sm:px-10 md:px-16 lg:px-20 py-12">
         {/* Color Tokens Section */}
         <section className="mb-16">
-          <h2 className="font-serif text-3xl text-[#243829] mb-6">
+          <h2 className="font-serif text-3xl text-sh-forest mb-6">
             Color Tokens
           </h2>
 
-          <div className="bg-white rounded-[18px] p-6 border border-[#e0e7dc] space-y-8">
+          <div className="bg-white rounded-card p-6 border border-sh-sage-light space-y-8">
             <div>
-              <h3 className="font-serif text-xl text-[#243829] mb-4">
+              <h3 className="font-serif text-xl text-sh-forest mb-4">
                 Primary Colors
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -339,7 +334,7 @@ export function DesignSystemPage() {
             </div>
 
             <div>
-              <h3 className="font-serif text-xl text-[#243829] mb-4">
+              <h3 className="font-serif text-xl text-sh-forest mb-4">
                 Secondary Colors
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -359,7 +354,7 @@ export function DesignSystemPage() {
             </div>
 
             <div>
-              <h3 className="font-serif text-xl text-[#243829] mb-4">
+              <h3 className="font-serif text-xl text-sh-forest mb-4">
                 Neutral Colors
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -380,24 +375,24 @@ export function DesignSystemPage() {
 
         {/* Typography Section */}
         <section className="mb-16">
-          <h2 className="font-serif text-3xl text-[#243829] mb-6">
+          <h2 className="font-serif text-3xl text-sh-forest mb-6">
             Typography
           </h2>
 
-          <div className="bg-white rounded-[18px] p-6 border border-[#e0e7dc]">
+          <div className="bg-white rounded-card p-6 border border-sh-sage-light">
             <TypographySample />
           </div>
         </section>
 
         {/* Assets Section */}
         <section className="mb-16">
-          <h2 className="font-serif text-3xl text-[#243829] mb-6">
+          <h2 className="font-serif text-3xl text-sh-forest mb-6">
             Brand Assets
           </h2>
 
-          <div className="bg-white rounded-[18px] p-6 border border-[#e0e7dc] space-y-8">
+          <div className="bg-white rounded-card p-6 border border-sh-sage-light space-y-8">
             <div>
-              <h3 className="font-serif text-xl text-[#243829] mb-4">
+              <h3 className="font-serif text-xl text-sh-forest mb-4">
                 Logo Components
               </h3>
               <div className="flex gap-6 flex-wrap">
@@ -425,7 +420,7 @@ export function DesignSystemPage() {
             </div>
 
             <div>
-              <h3 className="font-serif text-xl text-[#243829] mb-4">
+              <h3 className="font-serif text-xl text-sh-forest mb-4">
                 Footer Logo (on dark)
               </h3>
               <div className="flex gap-6 flex-wrap">
@@ -448,7 +443,7 @@ export function DesignSystemPage() {
             </div>
 
             <div>
-              <h3 className="font-serif text-xl text-[#243829] mb-4">Icons</h3>
+              <h3 className="font-serif text-xl text-sh-forest mb-4">Icons</h3>
               <div className="flex gap-6 flex-wrap">
                 <AssetPreview
                   name="Arrow Northeast"
@@ -463,7 +458,7 @@ export function DesignSystemPage() {
             </div>
 
             <div>
-              <h3 className="font-serif text-xl text-[#243829] mb-4">
+              <h3 className="font-serif text-xl text-sh-forest mb-4">
                 Photography
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -473,7 +468,7 @@ export function DesignSystemPage() {
                     alt="Community Bridge"
                     className="w-full h-24 object-cover rounded-lg"
                   />
-                  <span className="text-xs text-[#36454f]">
+                  <span className="text-xs text-sh-charcoal">
                     Community Bridge
                   </span>
                 </div>
@@ -483,7 +478,7 @@ export function DesignSystemPage() {
                     alt="Business Owners"
                     className="w-full h-24 object-cover rounded-lg"
                   />
-                  <span className="text-xs text-[#36454f]">
+                  <span className="text-xs text-sh-charcoal">
                     Business Owners
                   </span>
                 </div>
@@ -493,7 +488,7 @@ export function DesignSystemPage() {
                     alt="Personal Conversation"
                     className="w-full h-24 object-cover rounded-lg"
                   />
-                  <span className="text-xs text-[#36454f]">
+                  <span className="text-xs text-sh-charcoal">
                     Personal Conversation
                   </span>
                 </div>
@@ -503,7 +498,7 @@ export function DesignSystemPage() {
                     alt="Community Panorama"
                     className="w-full h-24 object-cover rounded-lg"
                   />
-                  <span className="text-xs text-[#36454f]">
+                  <span className="text-xs text-sh-charcoal">
                     Community Panorama
                   </span>
                 </div>
@@ -514,16 +509,16 @@ export function DesignSystemPage() {
 
         {/* Animations Section */}
         <section className="mb-16">
-          <h2 className="font-serif text-3xl text-[#243829] mb-6">
+          <h2 className="font-serif text-3xl text-sh-forest mb-6">
             Animations
           </h2>
 
-          <div className="bg-white rounded-[18px] p-6 border border-[#e0e7dc] space-y-8">
+          <div className="bg-white rounded-card p-6 border border-sh-sage-light space-y-8">
             <div>
-              <h3 className="font-serif text-xl text-[#243829] mb-4">
+              <h3 className="font-serif text-xl text-sh-forest mb-4">
                 Scroll Reveal Directions
               </h3>
-              <p className="text-[#36454f] mb-6">
+              <p className="text-sh-charcoal mb-6">
                 Elements animate into view with configurable direction and
                 stagger timing.
               </p>
@@ -531,29 +526,29 @@ export function DesignSystemPage() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="text-center p-4 bg-[#e0e7dc] rounded-[18px]">
-                <span className="font-medium text-sm text-[#243829]">
+              <div className="text-center p-4 bg-sh-sage-light rounded-card">
+                <span className="font-medium text-sm text-sh-forest">
                   Duration
                 </span>
-                <p className="text-[#36454f]">500ms</p>
+                <p className="text-sh-charcoal">500ms</p>
               </div>
-              <div className="text-center p-4 bg-[#e0e7dc] rounded-[18px]">
-                <span className="font-medium text-sm text-[#243829]">
+              <div className="text-center p-4 bg-sh-sage-light rounded-card">
+                <span className="font-medium text-sm text-sh-forest">
                   Translate
                 </span>
-                <p className="text-[#36454f]">30px</p>
+                <p className="text-sh-charcoal">30px</p>
               </div>
-              <div className="text-center p-4 bg-[#e0e7dc] rounded-[18px]">
-                <span className="font-medium text-sm text-[#243829]">
+              <div className="text-center p-4 bg-sh-sage-light rounded-card">
+                <span className="font-medium text-sm text-sh-forest">
                   Easing
                 </span>
-                <p className="text-[#36454f]">ease-out</p>
+                <p className="text-sh-charcoal">ease-out</p>
               </div>
-              <div className="text-center p-4 bg-[#e0e7dc] rounded-[18px]">
-                <span className="font-medium text-sm text-[#243829]">
+              <div className="text-center p-4 bg-sh-sage-light rounded-card">
+                <span className="font-medium text-sm text-sh-forest">
                   Stagger
                 </span>
-                <p className="text-[#36454f]">100ms</p>
+                <p className="text-sh-charcoal">100ms</p>
               </div>
             </div>
           </div>
@@ -561,7 +556,7 @@ export function DesignSystemPage() {
 
         {/* Components Grid */}
         <section>
-          <h2 className="font-serif text-3xl text-[#243829] mb-6">
+          <h2 className="font-serif text-3xl text-sh-forest mb-6">
             Components
           </h2>
 
@@ -570,13 +565,13 @@ export function DesignSystemPage() {
             <ComponentCard
               name="Primary Button"
               description="Cream pill button with arrow. Used on dark backgrounds for primary CTAs."
-              code={`<button className="inline-flex items-center gap-[14px] h-[54px] px-7 rounded-full bg-[#f7f5ee] text-[#243829] border border-[#f7f5ee] hover:bg-white">
+              code={`<button className="inline-flex items-center gap-3.5 h-13.5 px-7 rounded-full bg-sh-cream text-sh-forest border border-sh-cream hover:bg-white">
   <span>Review offering documents</span>
   <span>→</span>
 </button>`}
               prompt="Create a primary button for SageHaven with cream (#f7f5ee) background, forest (#243829) text, pill shape (rounded-full), 54px height, arrow icon. Include hover state."
             >
-              <div className="flex justify-center bg-[#243829] p-6 rounded-lg -mx-4 -mb-4 mt-4">
+              <div className="flex justify-center bg-sh-forest p-6 rounded-lg -mx-4 -mb-4 mt-4">
                 <PrimaryButton />
               </div>
             </ComponentCard>
@@ -585,12 +580,12 @@ export function DesignSystemPage() {
             <ComponentCard
               name="Outline Button (Dark BG)"
               description="Transparent button with cream border. Used on dark backgrounds."
-              code={`<button className="inline-flex items-center h-[54px] px-7 rounded-full bg-transparent text-[#f7f5ee] border border-[#f7f5ee] hover:bg-white/10">
+              code={`<button className="inline-flex items-center h-13.5 px-7 rounded-full bg-transparent text-sh-cream border border-sh-cream hover:bg-white/10">
   Fund your investment
 </button>`}
               prompt="Create an outline button for dark backgrounds with transparent bg, cream (#f7f5ee) text and border, pill shape, 54px height."
             >
-              <div className="flex justify-center bg-[#243829] p-6 rounded-lg -mx-4 -mb-4 mt-4">
+              <div className="flex justify-center bg-sh-forest p-6 rounded-lg -mx-4 -mb-4 mt-4">
                 <OutlineButtonDark />
               </div>
             </ComponentCard>
@@ -599,7 +594,7 @@ export function DesignSystemPage() {
             <ComponentCard
               name="Outline Button (Light BG)"
               description="Transparent button with forest border. Used on light backgrounds."
-              code={`<button className="inline-flex items-center h-[54px] px-7 rounded-full bg-transparent text-[#243829] border border-[#243829] hover:bg-black/5">
+              code={`<button className="inline-flex items-center h-13.5 px-7 rounded-full bg-transparent text-sh-forest border border-sh-forest hover:bg-black/5">
   Talk to the team
 </button>`}
               prompt="Create an outline button for light backgrounds with transparent bg, forest (#243829) text and border, pill shape."
@@ -613,23 +608,23 @@ export function DesignSystemPage() {
             <ComponentCard
               name="Step Card"
               description="Investment step card with number, title, description, and CTA. Used in HowToInvest section."
-              code={`<div className="bg-[#f7f5ee] rounded-[18px] p-[30px] flex flex-col justify-between h-[420px]">
+              code={`<div className="bg-sh-cream rounded-card p-7.5 flex flex-col justify-between h-105">
   <div className="flex flex-col gap-6">
-    <p className="text-[26px] text-[#3a503b]">01</p>
-    <h3 className="font-serif text-[30px] text-[#3a503b]">Review the offering</h3>
-    <p className="text-[18px] text-[#36454f]">Description...</p>
+    <p className="text-[26px] text-sh-sage">01</p>
+    <h3 className="font-serif text-[30px] text-sh-sage">Review the offering</h3>
+    <p className="text-[18px] text-sh-charcoal">Description...</p>
   </div>
   <button>Review offering documents</button>
 </div>`}
               prompt="Create a step card for SageHaven with cream background, 18px radius, step number in sage, serif title, charcoal description, and outline CTA button."
             >
               <div className="flex justify-center">
-                <div className="bg-[#f7f5ee] rounded-[18px] p-5 w-full">
-                  <p className="text-[20px] text-[#3a503b]">01</p>
-                  <h3 className="font-serif text-xl text-[#3a503b] mt-2">
+                <div className="bg-sh-cream rounded-card p-5 w-full">
+                  <p className="text-[20px] text-sh-sage">01</p>
+                  <h3 className="font-serif text-xl text-sh-sage mt-2">
                     Review the offering
                   </h3>
-                  <p className="text-sm text-[#36454f] mt-2 line-clamp-2">
+                  <p className="text-sm text-sh-charcoal mt-2 line-clamp-2">
                     Read and download the official offering documents...
                   </p>
                 </div>
@@ -641,8 +636,8 @@ export function DesignSystemPage() {
               name="Glassmorphic Overlay"
               description="Floating card with backdrop blur. Used over editorial images."
               code={`<div className="bg-white/80 backdrop-blur-[9px] rounded-[20px] p-7 shadow-[0px_8px_24px_rgba(0,0,0,0.1)]">
-  <div className="bg-[rgba(180,155,100,0.15)] rounded-full px-2.5 py-1">
-    <span className="text-[#8b6f3a] text-[11px] uppercase">Label</span>
+  <div className="bg-sh-gold-light rounded-full px-2.5 py-1">
+    <span className="text-sh-gold text-[11px] uppercase">Label</span>
   </div>
   <p className="font-semibold text-[18px]">Title text</p>
 </div>`}
@@ -650,9 +645,9 @@ export function DesignSystemPage() {
             >
               <div className="flex justify-center">
                 <div className="bg-white/80 backdrop-blur-[9px] rounded-[20px] p-4 shadow-md">
-                  <div className="inline-flex items-center gap-1.5 bg-[rgba(180,155,100,0.15)] rounded-full px-2.5 py-1">
-                    <div className="w-1.5 h-1.5 rounded-[3px] bg-[#8b6f3a]" />
-                    <span className="text-[#8b6f3a] text-[10px] uppercase font-semibold">
+                  <div className="inline-flex items-center gap-1.5 bg-sh-gold-light rounded-full px-2.5 py-1">
+                    <div className="w-1.5 h-1.5 rounded-[3px] bg-sh-gold" />
+                    <span className="text-sh-gold text-[10px] uppercase font-semibold">
                       Label
                     </span>
                   </div>
@@ -667,19 +662,19 @@ export function DesignSystemPage() {
             <ComponentCard
               name="Section Label"
               description="Uppercase label for section headers. 14px, uppercase, with letter spacing."
-              code={`<p className="text-[14px] uppercase tracking-[0.02em] text-[#f7f5ee]">
+              code={`<p className="text-[14px] uppercase tracking-[0.02em] text-sh-cream">
   SageHaven Bancorp · Investor overview
 </p>`}
               prompt="Create a section label with 14px size, uppercase, 0.02em letter spacing. Can be cream on dark or forest on light."
             >
               <div className="flex flex-col gap-4">
-                <div className="bg-[#243829] p-4 rounded-lg">
-                  <p className="text-[14px] uppercase tracking-[0.02em] text-[#f7f5ee]">
+                <div className="bg-sh-forest p-4 rounded-lg">
+                  <p className="text-[14px] uppercase tracking-[0.02em] text-sh-cream">
                     The opportunity
                   </p>
                 </div>
-                <div className="bg-[#f7f5ee] p-4 rounded-lg">
-                  <p className="text-[14px] uppercase tracking-[0.02em] text-[#243829]">
+                <div className="bg-sh-cream p-4 rounded-lg">
+                  <p className="text-[14px] uppercase tracking-[0.02em] text-sh-forest">
                     The opportunity
                   </p>
                 </div>
@@ -690,45 +685,45 @@ export function DesignSystemPage() {
 
         {/* Spacing Reference */}
         <section className="mt-16">
-          <h2 className="font-serif text-3xl text-[#243829] mb-6">
+          <h2 className="font-serif text-3xl text-sh-forest mb-6">
             Spacing Reference
           </h2>
 
-          <div className="bg-white rounded-[18px] p-6 border border-[#e0e7dc]">
+          <div className="bg-white rounded-card p-6 border border-sh-sage-light">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div>
-                <h3 className="font-medium text-[#243829] mb-3">
+                <h3 className="font-medium text-sh-forest mb-3">
                   Section Padding
                 </h3>
-                <ul className="text-sm text-[#36454f] space-y-1">
+                <ul className="text-sm text-sh-charcoal space-y-1">
                   <li>X: 182px (desktop)</li>
                   <li>Y: 120px (sections)</li>
                   <li>Y: 110px (hero)</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-medium text-[#243829] mb-3">
+                <h3 className="font-medium text-sh-forest mb-3">
                   Card Spacing
                 </h3>
-                <ul className="text-sm text-[#36454f] space-y-1">
+                <ul className="text-sm text-sh-charcoal space-y-1">
                   <li>Padding: 30px</li>
                   <li>Gap: 24px</li>
                   <li>Height: 420px (steps)</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-medium text-[#243829] mb-3">
+                <h3 className="font-medium text-sh-forest mb-3">
                   Border Radius
                 </h3>
-                <ul className="text-sm text-[#36454f] space-y-1">
+                <ul className="text-sm text-sh-charcoal space-y-1">
                   <li>Buttons: 100px (pill)</li>
                   <li>Cards: 18px</li>
                   <li>Images: 32px</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-medium text-[#243829] mb-3">Header</h3>
-                <ul className="text-sm text-[#36454f] space-y-1">
+                <h3 className="font-medium text-sh-forest mb-3">Header</h3>
+                <ul className="text-sm text-sh-charcoal space-y-1">
                   <li>Height: 86px</li>
                   <li>Border: 1px black</li>
                   <li>Position: sticky</li>
@@ -740,7 +735,7 @@ export function DesignSystemPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#243829] text-[#f7f5ee] py-12 px-5 sm:px-10 md:px-16 lg:px-20 mt-16">
+      <footer className="bg-sh-forest text-sh-cream py-12 px-5 sm:px-10 md:px-16 lg:px-20 mt-16">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-sm opacity-70">
             SageHaven Bancorp Design System v2.0.0
