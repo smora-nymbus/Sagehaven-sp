@@ -1,159 +1,192 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
-@import "@fontsource-variable/geist";
-@import "@fontsource/barlow-condensed/700.css";
-@import "@fontsource/eb-garamond/400.css";
-@import "@fontsource/eb-garamond/400-italic.css";
-@import "@fontsource/outfit/600.css";
 
 @custom-variant dark (&:is(.dark *));
 
+/* SageHaven Design Tokens */
 @theme inline {
-  --font-family-heading: "Barlow Condensed", sans-serif;
-  --font-family-sans: "Geist Variable", sans-serif;
-  --font-family-barlow: "Barlow Condensed", sans-serif;
-  --font-family-garamond: "EB Garamond", serif;
-  --font-family-outfit: "Outfit", sans-serif;
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --color-foreground: var(--foreground);
-  --color-background: var(--background);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  /* Typography */
+  --font-family-serif: "Times New Roman", "Georgia", serif;
+  --font-family-sans: "Inter", "DM Sans", system-ui, sans-serif;
+
+  /* SageHaven Color Palette */
+  --color-sh-forest: #243829;
+  --color-sh-forest-deep: #27382a;
+  --color-sh-sage: #3a503b;
+  --color-sh-sage-light: #e0e7dc;
+  --color-sh-cream: #f7f5ee;
+  --color-sh-charcoal: #36454f;
+  --color-sh-black: #000000;
+  --color-sh-gold: #8b6f3a;
+  --color-sh-gold-light: rgba(180, 155, 100, 0.15);
+
+  /* Spacing */
+  --spacing-section-x: 182px;
+  --spacing-section-y: 120px;
+
+  /* Border Radius */
+  --radius-button: 100px;
+  --radius-card: 18px;
+  --radius-image: 32px;
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --background: #f7f5ee;
+  --foreground: #243829;
+  --primary: #243829;
+  --primary-foreground: #f7f5ee;
+  --secondary: #3a503b;
+  --secondary-foreground: #f7f5ee;
+  --muted: #e0e7dc;
+  --muted-foreground: #36454f;
+  --accent: #8b6f3a;
+  --accent-foreground: #f7f5ee;
+  --border: #243829;
+  --ring: #3a503b;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
-/* Base styles using standard CSS */
+/* Base Styles */
 * {
-  outline-color: oklch(from var(--ring) l c h / 50%);
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: "EB Garamond", serif;
+  font-family: "Inter", "DM Sans", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 700;
+/* Typography Classes */
+.font-serif {
+  font-family: "Times New Roman", "Georgia", serif;
 }
 
-/* Font utility classes */
-.font-barlow {
-  font-family: "Barlow Condensed", sans-serif;
+.font-sans {
+  font-family: "Inter", "DM Sans", system-ui, sans-serif;
 }
 
-.font-garamond {
-  font-family: "EB Garamond", serif;
+/* SageHaven Heading Styles */
+.sh-headline-xl {
+  font-family: "Times New Roman", "Georgia", serif;
+  font-size: 88px;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  font-weight: 400;
 }
 
-.font-outfit {
-  font-family: "Outfit", sans-serif;
+.sh-headline-lg {
+  font-family: "Times New Roman", "Georgia", serif;
+  font-size: 60px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.sh-headline-md {
+  font-family: "Times New Roman", "Georgia", serif;
+  font-size: 52px;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+.sh-headline-sm {
+  font-family: "Times New Roman", "Georgia", serif;
+  font-size: 30px;
+  line-height: 1.08;
+  font-weight: 400;
+}
+
+/* Body Text */
+.sh-body-lg {
+  font-size: 20px;
+  line-height: 1.52;
+}
+
+.sh-body-md {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.sh-body-sm {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.sh-body-xs {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Label/Caption */
+.sh-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.sh-label-sm {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+/* Button Base Styles */
+.sh-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  height: 54px;
+  padding: 0 28px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.sh-button-primary {
+  background-color: var(--color-sh-cream);
+  border: 1px solid var(--color-sh-cream);
+  color: var(--color-sh-forest);
+}
+
+.sh-button-primary:hover {
+  background-color: #fff;
+}
+
+.sh-button-outline {
+  background-color: transparent;
+  border: 1px solid currentColor;
+}
+
+.sh-button-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Section Padding */
+.sh-section-padding {
+  padding-left: 182px;
+  padding-right: 182px;
+}
+
+/* Image radius */
+.sh-image-radius {
+  border-radius: 32px;
+}
+
+/* Card radius */
+.sh-card-radius {
+  border-radius: 18px;
 }

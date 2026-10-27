@@ -11,24 +11,25 @@ import {
 // Sample button components for preview
 function PrimaryButton() {
   return (
-    <button className="bg-[#4a934f] text-white px-5 py-3 rounded-md font-outfit font-semibold text-[13px] uppercase drop-shadow-[0px_6px_8px_rgba(74,147,79,0.2)] hover:bg-[#3d7a41] transition-colors">
-      Primary Button
+    <button className="inline-flex items-center justify-center gap-[14px] h-[54px] px-7 rounded-full bg-[#f7f5ee] text-[#243829] text-base border border-[#f7f5ee] hover:bg-white transition-colors">
+      <span>Review offering documents</span>
+      <span>→</span>
     </button>
   );
 }
 
-function SecondaryButton() {
+function OutlineButtonDark() {
   return (
-    <button className="bg-[#1e3366] text-white px-5 py-3 rounded-md font-outfit font-semibold text-[13px] uppercase border-b-2 border-[#ebbc59] hover:bg-[#172a54] transition-colors">
-      Secondary Button
+    <button className="inline-flex items-center justify-center h-[54px] px-7 rounded-full bg-transparent text-[#f7f5ee] text-base border border-[#f7f5ee] hover:bg-white/10 transition-colors">
+      Fund your investment
     </button>
   );
 }
 
-function OutlineButton() {
+function OutlineButtonLight() {
   return (
-    <button className="bg-[#faf9f5] text-[#e0512c] px-5 py-3 rounded-md font-outfit font-semibold text-[13px] uppercase border border-[#e0512c] hover:bg-[#f5f4f0] transition-colors">
-      Outline Button
+    <button className="inline-flex items-center justify-center h-[54px] px-7 rounded-full bg-transparent text-[#243829] text-base border border-[#243829] hover:bg-black/5 transition-colors">
+      Talk to the team
     </button>
   );
 }
@@ -54,14 +55,12 @@ function ColorSwatch({
   return (
     <div className="flex flex-col cursor-pointer" onClick={handleCopy}>
       <div
-        className={`h-16 rounded-lg flex items-end p-2 ${textDark ? "text-[#11224d]" : "text-white"} relative group`}
+        className={`h-16 rounded-lg flex items-end p-2 ${textDark ? "text-[#243829]" : "text-[#f7f5ee]"} relative group`}
         style={{ backgroundColor: hex }}
       >
-        <span className="font-outfit text-xs font-semibold">
-          {copied ? "Copied!" : hex}
-        </span>
+        <span className="text-xs font-medium">{copied ? "Copied!" : hex}</span>
       </div>
-      <span className="font-garamond text-sm text-[#5f666e] mt-1">{name}</span>
+      <span className="text-sm text-[#36454f] mt-1">{name}</span>
     </div>
   );
 }
@@ -69,21 +68,21 @@ function ColorSwatch({
 // Typography sample
 function TypographySample() {
   return (
-    <div className="space-y-3 text-left">
-      <p className="font-barlow font-bold text-3xl text-[#11224d]">
-        Barlow Condensed Bold
+    <div className="space-y-4 text-left">
+      <p className="font-serif text-[52px] leading-[1.08] text-[#243829]">
+        Times New Roman — Headlines
       </p>
-      <p className="font-garamond text-lg text-[#5f666e]">
-        EB Garamond Regular - Body text style
+      <p className="text-[20px] leading-[1.52] text-[#36454f]">
+        Inter / System Sans — Body text at 20px with relaxed line height
       </p>
-      <p className="font-garamond italic text-lg text-[#ebbc59]">
-        EB Garamond Italic - Tagline style
+      <p className="text-[18px] leading-[1.65] text-[#36454f]">
+        Body text at 18px — Used for descriptions and paragraph content
       </p>
-      <p className="font-outfit font-semibold text-sm text-[#1e3366] uppercase">
-        Outfit Semibold - UI Text
+      <p className="text-[14px] uppercase tracking-[0.02em] text-[#243829]">
+        Labels — 14px uppercase with letter spacing
       </p>
-      <p className="font-outfit font-bold text-xs tracking-[1px] text-[#4a934f] uppercase">
-        Outfit Bold - Badge Text
+      <p className="text-[11px] uppercase tracking-[0.02em] text-[#8b6f3a]">
+        Small labels — 11px uppercase (footer navigation)
       </p>
     </div>
   );
@@ -110,7 +109,7 @@ function AnimationDemo() {
         {["up", "down", "left", "right"].map((direction, index) => (
           <div
             key={`${key}-${direction}`}
-            className="w-16 h-16 bg-[#4a934f] rounded-lg flex items-center justify-center"
+            className="w-16 h-16 bg-[#3a503b] rounded-[18px] flex items-center justify-center"
             style={{
               opacity: isPlaying ? 1 : 0,
               transform: isPlaying
@@ -122,10 +121,10 @@ function AnimationDemo() {
                     : direction === "left"
                       ? "translateX(30px)"
                       : "translateX(-30px)",
-              transition: `opacity 0.6s ease-out ${index * 150}ms, transform 0.6s ease-out ${index * 150}ms`,
+              transition: `opacity 0.5s ease-out ${index * 100}ms, transform 0.5s ease-out ${index * 100}ms`,
             }}
           >
-            <span className="text-white font-outfit text-xs uppercase">
+            <span className="text-[#f7f5ee] text-xs uppercase">
               {direction}
             </span>
           </div>
@@ -133,54 +132,9 @@ function AnimationDemo() {
       </div>
       <button
         onClick={replay}
-        className="text-sm text-[#1e3366] font-outfit hover:underline"
+        className="text-sm text-[#3a503b] hover:underline"
       >
         ↻ Replay animation
-      </button>
-    </div>
-  );
-}
-
-// Stagger animation demo
-function StaggerDemo() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [key, setKey] = useState(0);
-
-  const replay = () => {
-    setIsPlaying(false);
-    setKey((k) => k + 1);
-    setTimeout(() => setIsPlaying(true), 50);
-  };
-
-  useEffect(() => {
-    setIsPlaying(true);
-  }, []);
-
-  const items = ["First", "Second", "Third", "Fourth", "Fifth"];
-  const staggerDelay = 100;
-
-  return (
-    <div className="space-y-4">
-      <div className="flex flex-col gap-2">
-        {items.map((item, index) => (
-          <div
-            key={`${key}-${item}`}
-            className="bg-[#1e3366] text-white px-4 py-2 rounded-lg font-outfit text-sm"
-            style={{
-              opacity: isPlaying ? 1 : 0,
-              transform: isPlaying ? "translateX(0)" : "translateX(-20px)",
-              transition: `opacity 0.4s ease-out ${index * staggerDelay}ms, transform 0.4s ease-out ${index * staggerDelay}ms`,
-            }}
-          >
-            {item} item (delay: {index * staggerDelay}ms)
-          </div>
-        ))}
-      </div>
-      <button
-        onClick={replay}
-        className="text-sm text-[#1e3366] font-outfit hover:underline"
-      >
-        ↻ Replay stagger
       </button>
     </div>
   );
@@ -211,7 +165,7 @@ function DownloadDropdown() {
       action: () =>
         downloadFile(
           generateTokensJSON(),
-          "strategist-bank-tokens.json",
+          "sagehaven-tokens.json",
           "application/json",
         ),
     },
@@ -219,11 +173,7 @@ function DownloadDropdown() {
       label: "Tokens (CSS)",
       description: "CSS custom properties",
       action: () =>
-        downloadFile(
-          generateTokensCSS(),
-          "strategist-bank-tokens.css",
-          "text/css",
-        ),
+        downloadFile(generateTokensCSS(), "sagehaven-tokens.css", "text/css"),
     },
     {
       label: "Tokens (SCSS)",
@@ -231,7 +181,7 @@ function DownloadDropdown() {
       action: () =>
         downloadFile(
           generateTokensSCSS(),
-          "strategist-bank-tokens.scss",
+          "sagehaven-tokens.scss",
           "text/plain",
         ),
     },
@@ -254,7 +204,7 @@ function DownloadDropdown() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 bg-[#4a934f] text-white px-4 py-2 rounded-lg font-outfit font-semibold text-sm hover:bg-[#3d7a41] transition-colors"
+        className="flex items-center gap-2 bg-[#f7f5ee] text-[#243829] px-5 py-2.5 rounded-full font-medium text-sm hover:bg-white transition-colors"
         aria-expanded={isOpen}
         aria-haspopup="listbox"
       >
@@ -289,11 +239,11 @@ function DownloadDropdown() {
 
       {isOpen && (
         <div
-          className="absolute right-0 top-full mt-2 w-64 bg-white rounded-lg shadow-lg border border-[#e2e8f0] overflow-hidden z-50"
+          className="absolute right-0 top-full mt-2 w-64 bg-white rounded-[18px] shadow-lg border border-[#e0e7dc] overflow-hidden z-50"
           role="listbox"
         >
-          <div className="p-2 border-b border-[#e2e8f0]">
-            <span className="font-outfit text-xs text-[#5f666e] uppercase tracking-wide">
+          <div className="p-3 border-b border-[#e0e7dc]">
+            <span className="text-xs text-[#36454f] uppercase tracking-wide">
               Download Assets
             </span>
           </div>
@@ -304,13 +254,13 @@ function DownloadDropdown() {
                 option.action();
                 setIsOpen(false);
               }}
-              className="w-full px-4 py-3 text-left hover:bg-[#f0f4f8] transition-colors flex flex-col gap-0.5"
+              className="w-full px-4 py-3 text-left hover:bg-[#e0e7dc]/50 transition-colors flex flex-col gap-0.5"
               role="option"
             >
-              <span className="font-outfit text-sm font-semibold text-[#1e3366]">
+              <span className="text-sm font-medium text-[#243829]">
                 {option.label}
               </span>
-              <span className="font-garamond text-xs text-[#5f666e]">
+              <span className="text-xs text-[#36454f]">
                 {option.description}
               </span>
             </button>
@@ -325,41 +275,39 @@ function DownloadDropdown() {
 function AssetPreview({
   name,
   path,
-  type,
+  bgDark = false,
 }: {
   name: string;
   path: string;
-  type: "icon" | "decoration" | "background";
+  bgDark?: boolean;
 }) {
-  const bgColor =
-    type === "decoration" || type === "background"
-      ? "bg-[#11224d]"
-      : "bg-white";
   return (
     <div className="flex flex-col items-center gap-2">
       <div
-        className={`w-20 h-20 ${bgColor} rounded-lg flex items-center justify-center p-2 border border-[#e2e8f0]`}
+        className={`w-24 h-24 ${bgDark ? "bg-[#243829]" : "bg-[#f7f5ee]"} rounded-[18px] flex items-center justify-center p-3 border border-[#e0e7dc]`}
       >
-        <img src={path} alt={name} className="max-w-full max-h-full" />
+        <img
+          src={path}
+          alt={name}
+          className="max-w-full max-h-full object-contain"
+        />
       </div>
-      <span className="font-outfit text-xs text-[#5f666e] text-center">
-        {name}
-      </span>
+      <span className="text-xs text-[#36454f] text-center">{name}</span>
     </div>
   );
 }
 
 export function DesignSystemPage() {
   return (
-    <div className="min-h-screen bg-[#faf9f5]">
+    <div className="min-h-screen bg-[#f7f5ee]">
       {/* Header */}
-      <header className="bg-[#11224d] text-white py-12 px-5 sm:px-10 md:px-16 lg:px-20">
+      <header className="bg-[#243829] text-[#f7f5ee] py-16 px-5 sm:px-10 md:px-16 lg:px-20">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
           <div>
-            <h1 className="font-barlow font-bold text-4xl md:text-5xl">
-              Strategist Bank Design System
+            <h1 className="font-serif text-4xl md:text-5xl">
+              SageHaven Bancorp Design System
             </h1>
-            <p className="font-garamond text-lg text-[#7a99c1] mt-2">
+            <p className="text-lg text-[#f7f5ee]/70 mt-3">
               Component library and design tokens for consistent brand
               implementation
             </p>
@@ -371,92 +319,58 @@ export function DesignSystemPage() {
       <main className="max-w-7xl mx-auto px-5 sm:px-10 md:px-16 lg:px-20 py-12">
         {/* Color Tokens Section */}
         <section className="mb-16">
-          <h2 className="font-barlow font-bold text-2xl text-[#11224d] mb-6">
+          <h2 className="font-serif text-3xl text-[#243829] mb-6">
             Color Tokens
           </h2>
 
-          <div className="bg-white rounded-xl p-6 border border-[#e2e8f0] space-y-8">
+          <div className="bg-white rounded-[18px] p-6 border border-[#e0e7dc] space-y-8">
             <div>
-              <h3 className="font-barlow font-bold text-lg text-[#1e3366] mb-4">
+              <h3 className="font-serif text-xl text-[#243829] mb-4">
                 Primary Colors
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <ColorSwatch name="Navy" hex={tokens.colors.primary.navy} />
-                <ColorSwatch name="Blue" hex={tokens.colors.primary.blue} />
+                <ColorSwatch name="Forest" hex={tokens.colors.primary.forest} />
                 <ColorSwatch
-                  name="Blue Dark"
-                  hex={tokens.colors.primary.blueDark}
+                  name="Forest Deep"
+                  hex={tokens.colors.primary.forestDeep}
                 />
+                <ColorSwatch name="Sage" hex={tokens.colors.primary.sage} />
               </div>
             </div>
 
             <div>
-              <h3 className="font-barlow font-bold text-lg text-[#1e3366] mb-4">
+              <h3 className="font-serif text-xl text-[#243829] mb-4">
                 Secondary Colors
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <ColorSwatch name="Green" hex={tokens.colors.secondary.green} />
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <ColorSwatch
-                  name="Gold"
-                  hex={tokens.colors.secondary.gold}
+                  name="Sage Light"
+                  hex={tokens.colors.secondary.sageLight}
                   textDark
                 />
                 <ColorSwatch
-                  name="Orange"
-                  hex={tokens.colors.secondary.orange}
+                  name="Cream"
+                  hex={tokens.colors.secondary.cream}
+                  textDark
                 />
+                <ColorSwatch name="Gold" hex={tokens.colors.secondary.gold} />
+                <ColorSwatch name="Gold Light" hex="#D4C4A8" textDark />
               </div>
             </div>
 
             <div>
-              <h3 className="font-barlow font-bold text-lg text-[#1e3366] mb-4">
+              <h3 className="font-serif text-xl text-[#243829] mb-4">
                 Neutral Colors
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <ColorSwatch
-                  name="Cream"
-                  hex={tokens.colors.neutral.cream}
-                  textDark
+                  name="Charcoal"
+                  hex={tokens.colors.neutral.charcoal}
                 />
+                <ColorSwatch name="Black" hex={tokens.colors.neutral.black} />
                 <ColorSwatch
                   name="White"
                   hex={tokens.colors.neutral.white}
-                  textDark
-                />
-                <ColorSwatch name="Gray" hex={tokens.colors.neutral.gray} />
-                <ColorSwatch
-                  name="Gray Light"
-                  hex={tokens.colors.neutral.grayLight}
-                />
-                <ColorSwatch
-                  name="Border"
-                  hex={tokens.colors.neutral.border}
-                  textDark
-                />
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-barlow font-bold text-lg text-[#1e3366] mb-4">
-                Semantic & Extended Colors
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <ColorSwatch
-                  name="Success Light"
-                  hex={tokens.colors.semantic.successLight}
-                  textDark
-                />
-                <ColorSwatch
-                  name="Blue Alt"
-                  hex={tokens.colors.extended.blueAlt}
-                />
-                <ColorSwatch
-                  name="Text Dark"
-                  hex={tokens.colors.extended.textDark}
-                />
-                <ColorSwatch
-                  name="Hover Light"
-                  hex={tokens.colors.extended.hoverLight}
                   textDark
                 />
               </div>
@@ -466,119 +380,131 @@ export function DesignSystemPage() {
 
         {/* Typography Section */}
         <section className="mb-16">
-          <h2 className="font-barlow font-bold text-2xl text-[#11224d] mb-6">
+          <h2 className="font-serif text-3xl text-[#243829] mb-6">
             Typography
           </h2>
 
-          <div className="bg-white rounded-xl p-6 border border-[#e2e8f0]">
+          <div className="bg-white rounded-[18px] p-6 border border-[#e0e7dc]">
             <TypographySample />
           </div>
         </section>
 
-        {/* Backgrounds & Assets Section */}
+        {/* Assets Section */}
         <section className="mb-16">
-          <h2 className="font-barlow font-bold text-2xl text-[#11224d] mb-6">
-            Backgrounds & Assets
+          <h2 className="font-serif text-3xl text-[#243829] mb-6">
+            Brand Assets
           </h2>
 
-          <div className="bg-white rounded-xl p-6 border border-[#e2e8f0] space-y-8">
+          <div className="bg-white rounded-[18px] p-6 border border-[#e0e7dc] space-y-8">
             <div>
-              <h3 className="font-barlow font-bold text-lg text-[#1e3366] mb-4">
-                Step Icons
+              <h3 className="font-serif text-xl text-[#243829] mb-4">
+                Logo Components
               </h3>
               <div className="flex gap-6 flex-wrap">
                 <AssetPreview
-                  name="File"
-                  path={tokens.icons.stepIcons.file}
-                  type="icon"
+                  name="Garland"
+                  path={tokens.assets.logo.garland}
                 />
                 <AssetPreview
-                  name="Credit Card"
-                  path={tokens.icons.stepIcons.creditCard}
-                  type="icon"
+                  name="SH Monogram"
+                  path={tokens.assets.logo.shMonogram}
                 />
                 <AssetPreview
-                  name="Phone"
-                  path={tokens.icons.stepIcons.phone}
-                  type="icon"
+                  name="Typemark"
+                  path={tokens.assets.logo.typemark}
                 />
                 <AssetPreview
-                  name="Check"
-                  path={tokens.icons.ui.check}
-                  type="icon"
+                  name="Botanical Garland"
+                  path={tokens.assets.logo.botanicalGarland}
+                />
+                <AssetPreview
+                  name="Botanical SH"
+                  path={tokens.assets.logo.botanicalSh}
                 />
               </div>
             </div>
 
             <div>
-              <h3 className="font-barlow font-bold text-lg text-[#1e3366] mb-4">
-                Decorative Elements
+              <h3 className="font-serif text-xl text-[#243829] mb-4">
+                Footer Logo (on dark)
               </h3>
               <div className="flex gap-6 flex-wrap">
                 <AssetPreview
-                  name="Header BG"
-                  path={tokens.backgrounds.decorations.headerBg}
-                  type="decoration"
+                  name="Garland Footer"
+                  path={tokens.assets.logo.garlandFooter}
+                  bgDark
                 />
                 <AssetPreview
-                  name="Steps BG"
-                  path={tokens.backgrounds.decorations.stepsBg}
-                  type="decoration"
+                  name="SH Footer"
+                  path={tokens.assets.logo.shFooter}
+                  bgDark
                 />
                 <AssetPreview
-                  name="Chevron"
-                  path={tokens.backgrounds.decorations.chevronDecoration}
-                  type="decoration"
+                  name="Typemark Footer"
+                  path={tokens.assets.logo.typemarkFooter}
+                  bgDark
                 />
               </div>
             </div>
 
             <div>
-              <h3 className="font-barlow font-bold text-lg text-[#1e3366] mb-4">
-                Brand Logos
-              </h3>
-              <div className="flex gap-6 flex-wrap items-end">
-                <div className="flex flex-col items-center gap-2">
-                  <div className="bg-[#faf9f5] rounded-lg p-4 border border-[#e2e8f0]">
-                    <img
-                      src={tokens.icons.brand.logo}
-                      alt="Main Logo"
-                      className="h-12"
-                    />
-                  </div>
-                  <span className="font-outfit text-xs text-[#5f666e]">
-                    Main Logo
-                  </span>
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <div className="bg-[#1e3366] rounded-lg p-4">
-                    <img
-                      src={tokens.icons.brand.logoFooter}
-                      alt="Footer Logo"
-                      className="h-8"
-                    />
-                  </div>
-                  <span className="font-outfit text-xs text-[#5f666e]">
-                    Footer Logo
-                  </span>
-                </div>
+              <h3 className="font-serif text-xl text-[#243829] mb-4">Icons</h3>
+              <div className="flex gap-6 flex-wrap">
+                <AssetPreview
+                  name="Arrow Northeast"
+                  path={tokens.assets.icons.arrowNortheast}
+                  bgDark
+                />
+                <AssetPreview
+                  name="Divider"
+                  path={tokens.assets.icons.divider}
+                />
               </div>
             </div>
 
             <div>
-              <h3 className="font-barlow font-bold text-lg text-[#1e3366] mb-4">
-                Gradients
+              <h3 className="font-serif text-xl text-[#243829] mb-4">
+                Photography
               </h3>
-              <div className="flex gap-4 flex-wrap">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 <div className="flex flex-col gap-2">
-                  <div
-                    className="w-48 h-16 rounded-lg"
-                    style={{
-                      background: tokens.gradients.footer,
-                    }}
+                  <img
+                    src={tokens.assets.images.communityBridge}
+                    alt="Community Bridge"
+                    className="w-full h-24 object-cover rounded-lg"
                   />
-                  <span className="font-outfit text-xs text-[#5f666e]">
-                    Footer / HowToInvest Gradient
+                  <span className="text-xs text-[#36454f]">
+                    Community Bridge
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <img
+                    src={tokens.assets.images.businessOwners}
+                    alt="Business Owners"
+                    className="w-full h-24 object-cover rounded-lg"
+                  />
+                  <span className="text-xs text-[#36454f]">
+                    Business Owners
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <img
+                    src={tokens.assets.images.personalConversation}
+                    alt="Personal Conversation"
+                    className="w-full h-24 object-cover rounded-lg"
+                  />
+                  <span className="text-xs text-[#36454f]">
+                    Personal Conversation
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <img
+                    src={tokens.assets.images.communityPanorama}
+                    alt="Community Panorama"
+                    className="w-full h-24 object-cover rounded-lg"
+                  />
+                  <span className="text-xs text-[#36454f]">
+                    Community Panorama
                   </span>
                 </div>
               </div>
@@ -588,57 +514,46 @@ export function DesignSystemPage() {
 
         {/* Animations Section */}
         <section className="mb-16">
-          <h2 className="font-barlow font-bold text-2xl text-[#11224d] mb-6">
+          <h2 className="font-serif text-3xl text-[#243829] mb-6">
             Animations
           </h2>
 
-          <div className="bg-white rounded-xl p-6 border border-[#e2e8f0] space-y-8">
+          <div className="bg-white rounded-[18px] p-6 border border-[#e0e7dc] space-y-8">
             <div>
-              <h3 className="font-barlow font-bold text-lg text-[#1e3366] mb-4">
+              <h3 className="font-serif text-xl text-[#243829] mb-4">
                 Scroll Reveal Directions
               </h3>
-              <p className="font-garamond text-[#5f666e] mb-6">
-                Elements animate into view with configurable direction, delay,
-                and stagger timing.
+              <p className="text-[#36454f] mb-6">
+                Elements animate into view with configurable direction and
+                stagger timing.
               </p>
               <AnimationDemo />
             </div>
 
-            <div>
-              <h3 className="font-barlow font-bold text-lg text-[#1e3366] mb-4">
-                Stagger Animation
-              </h3>
-              <p className="font-garamond text-[#5f666e] mb-6">
-                List items animate in sequence with configurable delay between
-                each item.
-              </p>
-              <StaggerDemo />
-            </div>
-
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="text-center p-4 bg-[#faf9f5] rounded-lg">
-                <span className="font-outfit font-semibold text-sm text-[#1e3366]">
+              <div className="text-center p-4 bg-[#e0e7dc] rounded-[18px]">
+                <span className="font-medium text-sm text-[#243829]">
                   Duration
                 </span>
-                <p className="font-garamond text-[#5f666e]">600ms</p>
+                <p className="text-[#36454f]">500ms</p>
               </div>
-              <div className="text-center p-4 bg-[#faf9f5] rounded-lg">
-                <span className="font-outfit font-semibold text-sm text-[#1e3366]">
+              <div className="text-center p-4 bg-[#e0e7dc] rounded-[18px]">
+                <span className="font-medium text-sm text-[#243829]">
                   Translate
                 </span>
-                <p className="font-garamond text-[#5f666e]">30px</p>
+                <p className="text-[#36454f]">30px</p>
               </div>
-              <div className="text-center p-4 bg-[#faf9f5] rounded-lg">
-                <span className="font-outfit font-semibold text-sm text-[#1e3366]">
+              <div className="text-center p-4 bg-[#e0e7dc] rounded-[18px]">
+                <span className="font-medium text-sm text-[#243829]">
                   Easing
                 </span>
-                <p className="font-garamond text-[#5f666e]">ease-out</p>
+                <p className="text-[#36454f]">ease-out</p>
               </div>
-              <div className="text-center p-4 bg-[#faf9f5] rounded-lg">
-                <span className="font-outfit font-semibold text-sm text-[#1e3366]">
+              <div className="text-center p-4 bg-[#e0e7dc] rounded-[18px]">
+                <span className="font-medium text-sm text-[#243829]">
                   Stagger
                 </span>
-                <p className="font-garamond text-[#5f666e]">150ms</p>
+                <p className="text-[#36454f]">100ms</p>
               </div>
             </div>
           </div>
@@ -646,7 +561,7 @@ export function DesignSystemPage() {
 
         {/* Components Grid */}
         <section>
-          <h2 className="font-barlow font-bold text-2xl text-[#11224d] mb-6">
+          <h2 className="font-serif text-3xl text-[#243829] mb-6">
             Components
           </h2>
 
@@ -654,275 +569,184 @@ export function DesignSystemPage() {
             {/* Primary Button */}
             <ComponentCard
               name="Primary Button"
-              description="Main call-to-action button with green background. Used for primary actions like form submissions."
-              code={`<button className="bg-[#4a934f] text-white px-5 py-3 rounded-md font-outfit font-semibold text-[13px] uppercase drop-shadow-[0px_6px_8px_rgba(74,147,79,0.2)] hover:bg-[#3d7a41] transition-colors">
-  Primary Button
+              description="Cream pill button with arrow. Used on dark backgrounds for primary CTAs."
+              code={`<button className="inline-flex items-center gap-[14px] h-[54px] px-7 rounded-full bg-[#f7f5ee] text-[#243829] border border-[#f7f5ee] hover:bg-white">
+  <span>Review offering documents</span>
+  <span>→</span>
 </button>`}
-              prompt="Create a primary button component for Strategist Bank with green (#4a934f) background, white text, Outfit font semibold uppercase, rounded-md corners, and a green drop shadow. Include hover state that darkens the background."
+              prompt="Create a primary button for SageHaven with cream (#f7f5ee) background, forest (#243829) text, pill shape (rounded-full), 54px height, arrow icon. Include hover state."
             >
-              <div className="flex justify-center">
+              <div className="flex justify-center bg-[#243829] p-6 rounded-lg -mx-4 -mb-4 mt-4">
                 <PrimaryButton />
               </div>
             </ComponentCard>
 
-            {/* Secondary Button */}
+            {/* Outline Button Dark */}
             <ComponentCard
-              name="Secondary Button"
-              description="Navy button with gold accent border. Used for secondary actions and navigation."
-              code={`<button className="bg-[#1e3366] text-white px-5 py-3 rounded-md font-outfit font-semibold text-[13px] uppercase border-b-2 border-[#ebbc59] hover:bg-[#172a54] transition-colors">
-  Secondary Button
+              name="Outline Button (Dark BG)"
+              description="Transparent button with cream border. Used on dark backgrounds."
+              code={`<button className="inline-flex items-center h-[54px] px-7 rounded-full bg-transparent text-[#f7f5ee] border border-[#f7f5ee] hover:bg-white/10">
+  Fund your investment
 </button>`}
-              prompt="Create a secondary button component for Strategist Bank with navy (#1e3366) background, white text, Outfit font semibold uppercase, rounded-md corners, and a gold (#ebbc59) bottom border accent. Include hover state."
+              prompt="Create an outline button for dark backgrounds with transparent bg, cream (#f7f5ee) text and border, pill shape, 54px height."
             >
-              <div className="flex justify-center">
-                <SecondaryButton />
+              <div className="flex justify-center bg-[#243829] p-6 rounded-lg -mx-4 -mb-4 mt-4">
+                <OutlineButtonDark />
               </div>
             </ComponentCard>
 
-            {/* Outline Button */}
+            {/* Outline Button Light */}
             <ComponentCard
-              name="Outline Button"
-              description="Cream background with orange border. Used for tertiary actions and alternative CTAs."
-              code={`<button className="bg-[#faf9f5] text-[#e0512c] px-5 py-3 rounded-md font-outfit font-semibold text-[13px] uppercase border border-[#e0512c] hover:bg-[#f5f4f0] transition-colors">
-  Outline Button
+              name="Outline Button (Light BG)"
+              description="Transparent button with forest border. Used on light backgrounds."
+              code={`<button className="inline-flex items-center h-[54px] px-7 rounded-full bg-transparent text-[#243829] border border-[#243829] hover:bg-black/5">
+  Talk to the team
 </button>`}
-              prompt="Create an outline button component for Strategist Bank with cream (#faf9f5) background, orange (#e0512c) text and border, Outfit font semibold uppercase, rounded-md corners. Include hover state."
+              prompt="Create an outline button for light backgrounds with transparent bg, forest (#243829) text and border, pill shape."
             >
               <div className="flex justify-center">
-                <OutlineButton />
-              </div>
-            </ComponentCard>
-
-            {/* Link Button */}
-            <ComponentCard
-              name="Link Button"
-              description="Text link styled as a button with arrow. Used for navigation back to pages."
-              code={`<a href="/" className="text-[#4a934f] font-outfit text-sm hover:underline">
-  ← Back to home
-</a>`}
-              prompt="Create a text link component styled in green (#4a934f), Outfit font at 14px, with hover underline effect. Include left arrow for back navigation."
-            >
-              <div className="flex justify-center">
-                <a
-                  href="#"
-                  className="text-[#4a934f] font-outfit text-sm hover:underline"
-                >
-                  ← Back to home
-                </a>
-              </div>
-            </ComponentCard>
-
-            {/* Animated Section */}
-            <ComponentCard
-              name="Animated Section"
-              description="Wrapper component that reveals children with scroll-triggered animations. Supports direction, delay, and responsive delays."
-              code={`<AnimatedSection
-  direction="up"
-  delay={200}
-  mobileDelay={0}
->
-  <div>Content animates into view</div>
-</AnimatedSection>`}
-              prompt="Create an AnimatedSection wrapper component that uses IntersectionObserver to trigger reveal animations when scrolled into view. Support direction (up/down/left/right), configurable delay, and separate mobile delay. Use 600ms duration with ease-out easing."
-            >
-              <div className="flex justify-center">
-                <div className="bg-[#11224d] text-white px-4 py-2 rounded-lg font-outfit text-sm">
-                  Scroll-triggered reveal
-                </div>
-              </div>
-            </ComponentCard>
-
-            {/* Success Badge */}
-            <ComponentCard
-              name="Success Badge"
-              description="Pill-shaped badge with icon for success states. Used in confirmation pages."
-              code={`<div className="bg-[#ebf4ec] flex gap-2 items-center px-3 py-1.5 rounded-full">
-  <img src="/images/check-icon.svg" alt="" className="size-4" />
-  <span className="font-outfit font-bold text-[#4a934f] text-xs tracking-[1px] uppercase">
-    Received
-  </span>
-</div>`}
-              prompt="Create a success badge component with light green (#ebf4ec) background, rounded-full shape, check icon, and 'Received' text in Outfit bold uppercase with green color."
-            >
-              <div className="flex justify-center">
-                <div className="bg-[#ebf4ec] flex gap-2 items-center px-3 py-1.5 rounded-full">
-                  <svg
-                    className="size-4 text-[#4a934f]"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="font-outfit font-bold text-[#4a934f] text-xs tracking-[1px] uppercase">
-                    Received
-                  </span>
-                </div>
-              </div>
-            </ComponentCard>
-
-            {/* Status Badge */}
-            <ComponentCard
-              name="Status Badge"
-              description="Small uppercase text badge. Used for status indicators like 'In Organization'."
-              code={`<span className="font-outfit font-semibold text-[11px] uppercase tracking-wide text-[#4a934f]">
-  In Organization
-</span>`}
-              prompt="Create a badge/label component for Strategist Bank using Outfit font, 11px size, semibold weight, uppercase with wide tracking, green (#4a934f) color."
-            >
-              <div className="flex justify-center">
-                <span className="font-outfit font-semibold text-[11px] uppercase tracking-wide text-[#4a934f]">
-                  In Organization
-                </span>
-              </div>
-            </ComponentCard>
-
-            {/* Dropdown */}
-            <ComponentCard
-              name="Dropdown Menu"
-              description="Click-triggered dropdown with options. Closes on outside click or Escape."
-              code={`<div className="relative">
-  <button onClick={toggle}>Options ▼</button>
-  {isOpen && (
-    <div className="absolute bg-white rounded-lg shadow-lg border">
-      <button className="hover:bg-[#f0f4f8]">Option 1</button>
-    </div>
-  )}
-</div>`}
-              prompt="Create a dropdown component with white background, border, shadow, and hover states. Support click-outside-to-close and escape key handling."
-            >
-              <div className="flex justify-center">
-                <div className="bg-white border border-[#e2e8f0] rounded-lg shadow-md overflow-hidden">
-                  <div className="px-4 py-2 text-sm font-outfit text-[#1e3366] hover:bg-[#f0f4f8]">
-                    Option 1
-                  </div>
-                  <div className="px-4 py-2 text-sm font-outfit text-[#1e3366] hover:bg-[#f0f4f8]">
-                    Option 2
-                  </div>
-                </div>
-              </div>
-            </ComponentCard>
-
-            {/* Thank You Card */}
-            <ComponentCard
-              name="Thank You Card"
-              description="Success confirmation card with staggered animations. Contains accent bar, logo, badge, heading, and CTA."
-              code={`<div className="bg-white rounded-3xl shadow-xl p-14">
-  <div className="bg-[#4a934f] h-1.5 rounded-full" />
-  <img src="/images/logo.svg" />
-  <div className="bg-[#ebf4ec] rounded-full">Received</div>
-  <h1 className="text-[#2c4a92]">Thank You!</h1>
-  <button className="bg-[#4a934f]">Back to Home</button>
-</div>`}
-              prompt="Create a thank you card component with white background, rounded-3xl, large shadow, green accent bar at top, logo, success badge, Thank You heading in blue (#2c4a92), description, and green CTA button. Each element should animate in with staggered delays."
-            >
-              <div className="flex justify-center">
-                <div className="bg-white border border-[#e2e8f0] rounded-xl shadow-lg p-4 w-full max-w-[180px]">
-                  <div className="bg-[#4a934f] h-1 rounded-full w-full mb-3" />
-                  <p className="font-outfit font-bold text-[#2c4a92] text-center text-lg">
-                    Thank You!
-                  </p>
-                  <p className="font-garamond text-[#5f666e] text-xs text-center mt-1">
-                    Your request was received
-                  </p>
-                </div>
+                <OutlineButtonLight />
               </div>
             </ComponentCard>
 
             {/* Step Card */}
             <ComponentCard
               name="Step Card"
-              description="Investment step card with number, icon, title, description, and CTA button. Highlighted variant has green border."
-              code={`<div className="bg-white rounded-xl border p-8 hover:-translate-y-2">
-  <span className="font-barlow text-2xl">01</span>
-  <img src="/images/icon-file.svg" />
-  <h3 className="font-barlow text-[32px]">Review Offering</h3>
-  <p className="font-garamond">Description text...</p>
-  <button>Review Documents</button>
+              description="Investment step card with number, title, description, and CTA. Used in HowToInvest section."
+              code={`<div className="bg-[#f7f5ee] rounded-[18px] p-[30px] flex flex-col justify-between h-[420px]">
+  <div className="flex flex-col gap-6">
+    <p className="text-[26px] text-[#3a503b]">01</p>
+    <h3 className="font-serif text-[30px] text-[#3a503b]">Review the offering</h3>
+    <p className="text-[18px] text-[#36454f]">Description...</p>
+  </div>
+  <button>Review offering documents</button>
 </div>`}
-              prompt="Create a step card component with step number, icon, title (Barlow 32px), description (Garamond), and CTA button. Include hover lift effect (-8px translateY with enhanced shadow). Highlighted variant has green (#4a934f) 1.5px border."
+              prompt="Create a step card for SageHaven with cream background, 18px radius, step number in sage, serif title, charcoal description, and outline CTA button."
             >
               <div className="flex justify-center">
-                <div className="bg-white border-[1.5px] border-[#4a934f] rounded-xl p-4 w-full max-w-[180px] shadow-[0px_10px_24px_0px_rgba(74,147,79,0.08)]">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="font-barlow font-bold text-lg text-[#4a934f]">
-                      02
-                    </span>
-                    <svg className="size-4" viewBox="0 0 24 24" fill="none">
-                      <rect
-                        x="3"
-                        y="6"
-                        width="18"
-                        height="15"
-                        rx="2"
-                        stroke="#4a934f"
-                        strokeWidth="2"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="font-barlow font-bold text-[#1e3366]">
-                    Complete & Fund
+                <div className="bg-[#f7f5ee] rounded-[18px] p-5 w-full">
+                  <p className="text-[20px] text-[#3a503b]">01</p>
+                  <h3 className="font-serif text-xl text-[#3a503b] mt-2">
+                    Review the offering
                   </h3>
+                  <p className="text-sm text-[#36454f] mt-2 line-clamp-2">
+                    Read and download the official offering documents...
+                  </p>
                 </div>
               </div>
             </ComponentCard>
 
-            {/* Footer Tagline */}
+            {/* Glassmorphic Card */}
             <ComponentCard
-              name="Footer Tagline"
-              description="Italic tagline in gold color. Used in footer brand section."
-              code={`<p className="font-garamond italic text-[16px] text-[#ebbc59]">
-  "A Bank that thinks like a Business."
-</p>`}
-              prompt="Create an italic tagline component using EB Garamond italic, 16px, gold (#ebbc59) color. Used for brand messaging."
+              name="Glassmorphic Overlay"
+              description="Floating card with backdrop blur. Used over editorial images."
+              code={`<div className="bg-white/80 backdrop-blur-[9px] rounded-[20px] p-7 shadow-[0px_8px_24px_rgba(0,0,0,0.1)]">
+  <div className="bg-[rgba(180,155,100,0.15)] rounded-full px-2.5 py-1">
+    <span className="text-[#8b6f3a] text-[11px] uppercase">Label</span>
+  </div>
+  <p className="font-semibold text-[18px]">Title text</p>
+</div>`}
+              prompt="Create a glassmorphic overlay card with white/80 bg, backdrop blur, rounded-20px, shadow, gold badge, semibold title."
             >
               <div className="flex justify-center">
-                <p className="font-garamond italic text-base text-[#ebbc59]">
-                  "A Bank that thinks like a Business."
-                </p>
+                <div className="bg-white/80 backdrop-blur-[9px] rounded-[20px] p-4 shadow-md">
+                  <div className="inline-flex items-center gap-1.5 bg-[rgba(180,155,100,0.15)] rounded-full px-2.5 py-1">
+                    <div className="w-1.5 h-1.5 rounded-[3px] bg-[#8b6f3a]" />
+                    <span className="text-[#8b6f3a] text-[10px] uppercase font-semibold">
+                      Label
+                    </span>
+                  </div>
+                  <p className="font-semibold text-sm text-[#1a1a1a] mt-2">
+                    Business banking and private banking
+                  </p>
+                </div>
               </div>
             </ComponentCard>
 
-            {/* Heading Styles */}
+            {/* Section Label */}
             <ComponentCard
-              name="Heading Styles"
-              description="Barlow Condensed Bold headings in various sizes. Used for all h1-h6 elements."
-              code={`<h1 className="font-barlow font-bold text-[72px] text-[#11224d] leading-[1.05]">
-  Hero Heading
-</h1>
-<h2 className="font-barlow font-bold text-[52px] text-[#2c4a92]">
-  Section Title
-</h2>
-<h3 className="font-barlow font-bold text-[32px] text-[#1e3366]">
-  Card Title
-</h3>`}
-              prompt="Create heading styles for Strategist Bank using Barlow Condensed Bold font. H1 is 72px navy (#11224d) with 1.05 line height. H2 is 52px blue-alt (#2c4a92). H3 is 32px blue (#1e3366). All headings should be bold."
+              name="Section Label"
+              description="Uppercase label for section headers. 14px, uppercase, with letter spacing."
+              code={`<p className="text-[14px] uppercase tracking-[0.02em] text-[#f7f5ee]">
+  SageHaven Bancorp · Investor overview
+</p>`}
+              prompt="Create a section label with 14px size, uppercase, 0.02em letter spacing. Can be cream on dark or forest on light."
             >
-              <div className="space-y-2 text-left">
-                <p className="font-barlow font-bold text-2xl text-[#11224d]">
-                  Hero (72px)
-                </p>
-                <p className="font-barlow font-bold text-xl text-[#2c4a92]">
-                  Section (52px)
-                </p>
-                <p className="font-barlow font-bold text-lg text-[#1e3366]">
-                  Card (32px)
-                </p>
+              <div className="flex flex-col gap-4">
+                <div className="bg-[#243829] p-4 rounded-lg">
+                  <p className="text-[14px] uppercase tracking-[0.02em] text-[#f7f5ee]">
+                    The opportunity
+                  </p>
+                </div>
+                <div className="bg-[#f7f5ee] p-4 rounded-lg">
+                  <p className="text-[14px] uppercase tracking-[0.02em] text-[#243829]">
+                    The opportunity
+                  </p>
+                </div>
               </div>
             </ComponentCard>
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="mt-16 pt-8 border-t border-[#e2e8f0]">
-          <p className="font-garamond text-sm text-[#5f666e] text-center">
-            Strategist Bank Design System v1.1.0 • Last updated: October 2026
-          </p>
-        </footer>
+        {/* Spacing Reference */}
+        <section className="mt-16">
+          <h2 className="font-serif text-3xl text-[#243829] mb-6">
+            Spacing Reference
+          </h2>
+
+          <div className="bg-white rounded-[18px] p-6 border border-[#e0e7dc]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div>
+                <h3 className="font-medium text-[#243829] mb-3">
+                  Section Padding
+                </h3>
+                <ul className="text-sm text-[#36454f] space-y-1">
+                  <li>X: 182px (desktop)</li>
+                  <li>Y: 120px (sections)</li>
+                  <li>Y: 110px (hero)</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-medium text-[#243829] mb-3">
+                  Card Spacing
+                </h3>
+                <ul className="text-sm text-[#36454f] space-y-1">
+                  <li>Padding: 30px</li>
+                  <li>Gap: 24px</li>
+                  <li>Height: 420px (steps)</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-medium text-[#243829] mb-3">
+                  Border Radius
+                </h3>
+                <ul className="text-sm text-[#36454f] space-y-1">
+                  <li>Buttons: 100px (pill)</li>
+                  <li>Cards: 18px</li>
+                  <li>Images: 32px</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-medium text-[#243829] mb-3">Header</h3>
+                <ul className="text-sm text-[#36454f] space-y-1">
+                  <li>Height: 86px</li>
+                  <li>Border: 1px black</li>
+                  <li>Position: sticky</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-[#243829] text-[#f7f5ee] py-12 px-5 sm:px-10 md:px-16 lg:px-20 mt-16">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-sm opacity-70">
+            SageHaven Bancorp Design System v2.0.0
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

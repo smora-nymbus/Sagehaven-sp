@@ -1,16 +1,18 @@
-# Strategist Bank Design System
+# SageHaven Bancorp Design System
 
 ## Overview
 
-This design system defines the visual language and component library for Strategist Bank. All components should follow these guidelines to maintain brand consistency.
+This design system defines the visual language and component library for SageHaven Bancorp. All components should follow these guidelines to maintain brand consistency.
 
 ---
 
 ## Brand Identity
 
-**Tagline:** "A Bank that thinks like a Business."
+**Tagline:** "A Community Bank with Heart."
 
-**Voice:** Professional, trustworthy, community-focused, approachable
+**Voice:** Warm, trustworthy, rooted in community, sophisticated yet approachable
+
+**Brand Essence:** SageHaven represents growth, stability, and natural wisdom — combining the calming presence of sage with the security of a haven.
 
 ---
 
@@ -18,39 +20,41 @@ This design system defines the visual language and component library for Strateg
 
 ### Primary Colors
 
-| Name      | Hex       | Usage                                |
-| --------- | --------- | ------------------------------------ |
-| Navy      | `#11224d` | Headers, primary headings, hero text |
-| Blue      | `#1e3366` | Primary buttons, section backgrounds |
-| Blue Dark | `#0f1b2d` | Gradient endpoints                   |
+| Name        | Hex       | Usage                                |
+| ----------- | --------- | ------------------------------------ |
+| Forest      | `#243829` | Headers, primary headings, hero text |
+| Forest Deep | `#27382a` | Gradient endpoints, deep backgrounds |
+| Sage        | `#3a503b` | Primary buttons, section backgrounds |
+| Sage Light  | `#e0e7dc` | Light backgrounds, subtle accents    |
 
 ### Secondary Colors
 
-| Name   | Hex       | Usage                                      |
-| ------ | --------- | ------------------------------------------ |
-| Green  | `#4a934f` | Success states, CTA buttons, highlights    |
-| Gold   | `#ebbc59` | Accent borders, section titles, highlights |
-| Orange | `#e0512c` | Secondary CTA, warnings, step indicators   |
+| Name  | Hex       | Usage                            |
+| ----- | --------- | -------------------------------- |
+| Cream | `#f7f5ee` | Page backgrounds, content areas  |
+| Gold  | `#8b6f3a` | Accent borders, premium elements |
+| Black | `#000000` | Strong text, high-contrast areas |
 
 ### Neutral Colors
 
 | Name       | Hex       | Usage                        |
 | ---------- | --------- | ---------------------------- |
-| Cream      | `#faf9f5` | Page backgrounds             |
-| White      | `#ffffff` | Cards, content areas         |
-| Gray       | `#5f666e` | Body text                    |
-| Gray Light | `#7a99c1` | Secondary text, footer links |
+| Charcoal   | `#36454f` | Body text, descriptions      |
+| White      | `#ffffff` | Cards, content backgrounds   |
 | Border     | `#e2e8f0` | Card borders, dividers       |
+| Gray Light | `#94a3b8` | Secondary text, placeholders |
 
-### Extended Colors
+### Semantic Colors
 
-| Name          | Hex       | Usage                     |
-| ------------- | --------- | ------------------------- |
-| Blue Alt      | `#2c4a92` | Thank you heading         |
-| Blue Divider  | `#2C4A92` | Footer section divider    |
-| Text Dark     | `#1a1d20` | Dark body text            |
-| Hover Light   | `#f0f4f8` | Dropdown hover background |
-| Success Light | `#ebf4ec` | Success badge background  |
+| Name       | Hex       | Usage                     |
+| ---------- | --------- | ------------------------- |
+| Background | `#f7f5ee` | Default page background   |
+| Surface    | `#ffffff` | Card and content surfaces |
+| Text       | `#36454f` | Primary body text         |
+| TextMuted  | `#64748b` | Secondary/muted text      |
+| Success    | `#3a503b` | Success states            |
+| Warning    | `#8b6f3a` | Warning states            |
+| Error      | `#b91c1c` | Error states              |
 
 ---
 
@@ -58,26 +62,37 @@ This design system defines the visual language and component library for Strateg
 
 ### Font Families
 
-| Type    | Font                    | Usage                               |
-| ------- | ----------------------- | ----------------------------------- |
-| Heading | Barlow Condensed (700)  | All headings (h1-h6), step numbers  |
-| Body    | EB Garamond (400, 400i) | Body text, descriptions, paragraphs |
-| UI      | Outfit (600)            | Buttons, labels, badges             |
+| Type    | Font                                   | Usage                               |
+| ------- | -------------------------------------- | ----------------------------------- |
+| Heading | Times New Roman, Georgia, Times, serif | All headings (h1-h6), display text  |
+| Body    | Inter, system-ui, sans-serif           | Body text, descriptions, paragraphs |
+| UI      | DM Sans, system-ui, sans-serif         | Buttons, labels, badges, UI text    |
 
 ### Type Scale
 
-| Name | Size | Line Height | Usage                |
-| ---- | ---- | ----------- | -------------------- |
-| 5xl  | 72px | 1.05        | Hero headlines       |
-| 4xl  | 52px | 1.05        | Section titles       |
-| 3xl  | 32px | 1.2         | Card titles          |
-| 2xl  | 24px | 1.2         | Step numbers         |
-| xl   | 20px | 1.5         | Large body text      |
-| lg   | 18px | 1.5         | Card descriptions    |
-| md   | 16px | 1.5         | Standard body        |
-| base | 14px | 1.5         | UI text, labels      |
-| sm   | 12px | 1.5         | Small text, captions |
-| xs   | 11px | 1.5         | Badges, fine print   |
+| Name | Size | Line Height | Usage                    |
+| ---- | ---- | ----------- | ------------------------ |
+| 7xl  | 96px | 1.0         | Hero headlines (desktop) |
+| 6xl  | 72px | 1.0         | Large section titles     |
+| 5xl  | 60px | 1.05        | Section titles (desktop) |
+| 4xl  | 48px | 1.1         | Major headings           |
+| 3xl  | 36px | 1.2         | Card titles, subsections |
+| 2xl  | 30px | 1.2         | Medium headings          |
+| xl   | 24px | 1.3         | Large body text          |
+| lg   | 20px | 1.5         | Card descriptions        |
+| md   | 18px | 1.5         | Standard body            |
+| base | 16px | 1.5         | UI text, labels          |
+| sm   | 14px | 1.5         | Small text, captions     |
+| xs   | 12px | 1.5         | Fine print, badges       |
+
+### Font Weights
+
+| Name     | Weight | Usage                      |
+| -------- | ------ | -------------------------- |
+| normal   | 400    | Body text                  |
+| medium   | 500    | UI elements, emphasis      |
+| semibold | 600    | Subheadings, buttons       |
+| bold     | 700    | Headlines, strong emphasis |
 
 ---
 
@@ -96,39 +111,45 @@ Based on 4px grid:
 - `12` = 48px
 - `16` = 64px
 - `20` = 80px
+- `24` = 96px
+- `32` = 128px
 
 ### Section Padding
 
-- Mobile: `px-5` (20px)
-- Tablet: `sm:px-10` (40px), `md:px-16` (64px)
-- Desktop: `lg:px-20` (80px)
+- Mobile: `px-4` (16px) to `px-6` (24px)
+- Tablet: `md:px-8` (32px) to `md:px-12` (48px)
+- Desktop: `lg:px-16` (64px) to `lg:px-24` (96px)
 
 ---
 
 ## Border Radius
 
-| Name | Value  | Usage            |
-| ---- | ------ | ---------------- |
-| sm   | 4px    | Small elements   |
-| md   | 6px    | Buttons          |
-| lg   | 12px   | Cards            |
-| xl   | 24px   | Large containers |
-| full | 9999px | Pills, avatars   |
+| Name | Value  | Usage                  |
+| ---- | ------ | ---------------------- |
+| none | 0      | Sharp corners          |
+| sm   | 4px    | Small elements         |
+| md   | 6px    | Buttons, inputs        |
+| lg   | 8px    | Cards                  |
+| xl   | 12px   | Large containers       |
+| 2xl  | 16px   | Feature cards          |
+| 3xl  | 24px   | Hero elements          |
+| full | 9999px | Pills, circular shapes |
 
 ---
 
 ## Shadows
 
-| Name         | Value                                                          | Usage             |
-| ------------ | -------------------------------------------------------------- | ----------------- |
-| sm           | `0px 2px 5px rgba(0,0,0,0.04)`                                 | Cards (default)   |
-| md           | `0px 4px 24px rgba(0,0,0,0.03)`                                | Medium elements   |
-| lg           | `0px 10px 24px rgba(74,147,79,0.08)`                           | Highlighted cards |
-| xl           | `0px 18px 24px rgba(0,0,0,0.08), 0px 2px 4px rgba(0,0,0,0.06)` | Success card      |
-| button       | `0px 6px 8px rgba(74,147,79,0.2)`                              | Primary buttons   |
-| buttonOrange | `0px 6px 8px rgba(224,81,44,0.08)`                             | Secondary buttons |
-| cardHover    | `0px 12px 28px rgba(0,0,0,0.12)`                               | Card hover state  |
-| dropdown     | `0px 4px 16px rgba(0,0,0,0.12)`                                | Dropdown menus    |
+| Name      | Value                                                                       | Usage              |
+| --------- | --------------------------------------------------------------------------- | ------------------ |
+| sm        | `0 1px 2px rgba(0, 0, 0, 0.05)`                                             | Subtle elevation   |
+| md        | `0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)`     | Cards (default)    |
+| lg        | `0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)`   | Elevated elements  |
+| xl        | `0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)` | Modals, popovers   |
+| 2xl       | `0 25px 50px -12px rgba(0, 0, 0, 0.25)`                                     | Prominent elements |
+| card      | `0 4px 24px rgba(0, 0, 0, 0.08)`                                            | Content cards      |
+| cardHover | `0 12px 28px rgba(0, 0, 0, 0.12)`                                           | Card hover state   |
+| button    | `0 4px 12px rgba(58, 80, 59, 0.2)`                                          | Primary buttons    |
+| glass     | `0 8px 32px rgba(0, 0, 0, 0.1)`                                             | Glassmorphic cards |
 
 ---
 
@@ -141,18 +162,17 @@ Based on 4px grid:
 
 ### Section Components
 
-- [HowToInvest](#howtoinvest)
+- [HeroSection](#herosection)
+- [OpportunitySection](#opportunitysection)
+- [HowToInvestSection](#howtoinvestsection)
+- [HumanConnectionSection](#humanconnectionsection)
 - [CommunitySection](#communitysection)
-
-### Page Components
-
-- [ThankYouPage](#thankyoupage)
-- [LogoDownloadPage](#logodownloadpage)
 
 ### UI Components
 
 - [Button](#button)
 - [StepCard](#stepcard)
+- [GlassCard](#glasscard)
 - [AnimatedSection](#animatedsection)
 
 ---
@@ -161,25 +181,139 @@ Based on 4px grid:
 
 ### Header
 
-**Purpose:** Main page header with logo, tagline, and hero text.
+**Purpose:** Main page header with logo, navigation, and CTA button.
+
+**Features:**
+
+- Full-width cream background
+- Left-aligned typemark logo
+- Right-aligned "Invest Now" button
+- Sticky positioning on scroll (optional)
 
 **Tokens Used:**
 
-- Background: `neutral.cream`
-- Heading: `primary.navy`, `typography.fontFamilies.heading`
-- Badge: `secondary.green`, `typography.fontFamilies.ui`
+- Background: `colors.secondary.cream`
+- Logo: `/images/typemark.svg`
+- Button: `colors.primary.forest`, white text
+
+---
+
+### HeroSection
+
+**Purpose:** Full-viewport hero with headline, description, and atmospheric imagery.
+
+**Features:**
+
+- Large serif headline with brand colors
+- Supporting body copy
+- Full-width atmospheric background image
+- Decorative garland element
+
+**Tokens Used:**
+
+- Background: `colors.secondary.cream`
+- Headline: `colors.primary.forest`, `typography.fontFamilies.heading`
+- Body: `colors.neutral.charcoal`, `typography.fontFamilies.body`
+- Image: `/images/atmospheric-backdrop.png`
+- Decoration: `/images/garland.svg`
+
+---
+
+### OpportunitySection
+
+**Purpose:** Highlight investment opportunity with glassmorphic card overlay on imagery.
+
+**Features:**
+
+- Business owners image background
+- Glassmorphic card with headline and description
+- Decorative divider element
+- Subtle backdrop blur effect
+
+**Tokens Used:**
+
+- Background image: `/images/business-owners.png`
+- Card: White with `backdrop-filter: blur(8px)`, 95% opacity
+- Headline: `colors.primary.forest`
+- Body: `colors.neutral.charcoal`
+- Divider: `/images/divider.svg`
+
+---
+
+### HowToInvestSection
+
+**Purpose:** Three-step investment process cards.
+
+**Features:**
+
+- Forest green background
+- Three numbered step cards
+- Arrow decorations between steps
+- Clear iconography and descriptions
+
+**Tokens Used:**
+
+- Background: `colors.primary.forest`
+- Cards: `colors.secondary.cream`
+- Step numbers: `colors.primary.sage`
+- Arrows: `/images/arrow-northeast.svg`
+
+---
+
+### HumanConnectionSection
+
+**Purpose:** Emphasize personal banking relationship.
+
+**Features:**
+
+- Personal conversation imagery
+- Botanical monogram decoration
+- Warm, inviting copy
+
+**Tokens Used:**
+
+- Background: `colors.secondary.cream`
+- Image: `/images/personal-conversation.png`
+- Monogram: `/images/botanical-sh.svg`
+- Headline: `colors.primary.forest`
+
+---
+
+### CommunitySection
+
+**Purpose:** Community-focused messaging with panoramic imagery.
+
+**Features:**
+
+- Full-width community panorama
+- Centered headline overlay
+- Brand garland decoration
+
+**Tokens Used:**
+
+- Background image: `/images/community-panorama.png`
+- Headline: `colors.secondary.cream` (on dark overlay)
+- Decoration: `/images/garland.svg`
 
 ---
 
 ### Footer
 
-**Purpose:** Page footer with brand info, contact, legal links, and disclosures.
+**Purpose:** Page footer with brand info, contact details, and legal links.
+
+**Sections:**
+
+1. Brand column with footer logo and tagline
+2. Contact information
+3. Legal links
+4. Copyright and disclosures
 
 **Tokens Used:**
 
-- Background: Gradient from `primary.blue` to `primary.blueDark`
-- Text: `neutral.white`, `neutral.grayLight`
-- Accent: `secondary.gold`
+- Background: `colors.primary.forest`
+- Text: `colors.secondary.cream`, `colors.primary.sageLight`
+- Logo: `/images/sh-footer.svg`, `/images/typemark-footer.svg`
+- Decoration: `/images/garland-footer.svg`
 
 ---
 
@@ -187,34 +321,29 @@ Based on 4px grid:
 
 **Variants:**
 
-1. **Primary** - Green background, white text
-2. **Secondary** - Navy background, gold bottom border
-3. **Outline** - Cream background, orange border and text
+1. **Primary** - Forest green background, cream text
+2. **Secondary** - Cream background, forest text, gold border
+3. **Outline** - Transparent background, forest border and text
+4. **Ghost** - No background, forest text
 
 **Tokens Used:**
 
-- Primary: `secondary.green`, shadow `button`
-- Secondary: `primary.blue`, border `secondary.gold`
-- Outline: `neutral.cream`, border `secondary.orange`
+- Primary: `colors.primary.forest`, `shadows.button`
+- Secondary: `colors.secondary.cream`, border `colors.secondary.gold`
+- Font: `typography.fontFamilies.ui`, `typography.fontWeights.semibold`
 
 ---
 
-### StepCard
+### GlassCard
 
-**Purpose:** Investment step card with number, icon, title, description, and CTA.
-
-**Variants:**
-
-1. **Default** - Gray border
-2. **Highlighted** - Green border with enhanced shadow
+**Purpose:** Glassmorphic card component with backdrop blur.
 
 **Tokens Used:**
 
-- Background: `neutral.white`
-- Border: `neutral.border` or `secondary.green`
-- Step number: `typography.fontFamilies.heading`
-- Title: `primary.blue`, `typography.fontFamilies.heading`
-- Description: `neutral.gray`, `typography.fontFamilies.body`
+- Background: `rgba(255, 255, 255, 0.95)`
+- Backdrop filter: `blur(8px)`
+- Border: `rgba(255, 255, 255, 0.2)`
+- Shadow: `shadows.glass`
 
 ---
 
@@ -232,111 +361,8 @@ Based on 4px grid:
 
 **Tokens Used:**
 
-- Duration: `animations.scrollReveal.duration` (600ms)
-- Translate: `animations.scrollReveal.translateDistance` (30px)
+- Duration: `animations.duration.slow` (600ms)
 - Easing: `animations.easing.easeOut`
-
----
-
-### ThankYouPage
-
-**Purpose:** Success/confirmation page after form submission.
-
-**Features:**
-
-- Centered card with staggered entrance animations
-- Brand accent bar with scaleX animation
-- Logo and "Received" badge
-- Call-to-action button to return home
-
-**Tokens Used:**
-
-- Background: `neutral.cream` with SVG pattern
-- Card: `neutral.white` with enhanced shadow
-- Accent bar: `secondary.green`
-- Badge background: `#ebf4ec` (light green)
-- Heading: `#2c4a92` (blue variant)
-- Button: `secondary.green`
-
----
-
-### LogoDownloadPage
-
-**Purpose:** Page for downloading brand logo in multiple formats.
-
-**Features:**
-
-- Centered logo display
-- Dropdown menu with format options (SVG, PNG, JPG, GIF, BMP)
-- Client-side SVG to raster conversion
-- Loading state during conversion
-
-**Tokens Used:**
-
-- Background: `neutral.cream`
-- Button: `primary.blue`
-- Dropdown: `neutral.white` with `neutral.border`
-
----
-
-### Footer
-
-**Purpose:** Page footer with brand info, contact, legal links, and disclosures.
-
-**Sections:**
-
-1. Brand column with logo, tagline, and description
-2. Contact column with address, email, phone
-3. Legal column with links
-4. Divider line
-5. Disclosures and copyright
-
-**Tokens Used:**
-
-- Background: Gradient from `primary.blue` to `primary.blueDark`
-- Text: `neutral.white`, `neutral.grayLight`
-- Accent: `secondary.gold` (tagline)
-- Divider: `#2C4A92`
-
----
-
-### CommunitySection
-
-**Purpose:** Community-focused messaging section with title and description.
-
-**Layout:**
-
-- Full-width cream background
-- Centered heading and paragraph
-- Uses AnimatedSection for entrance animations
-
-**Tokens Used:**
-
-- Background: `neutral.cream`
-- Heading: `extended.blueAlt`, `typography.fontFamilies.heading`
-- Body: `neutral.gray`, `typography.fontFamilies.body`
-
----
-
-### Dropdown
-
-**Purpose:** Reusable dropdown menu component with options.
-
-**Features:**
-
-- Click to toggle open/close
-- Click outside to close
-- Escape key to close
-- Hover states on options
-- Icon rotation animation on open
-
-**Tokens Used:**
-
-- Background: `neutral.white`
-- Border: `neutral.border`
-- Shadow: `shadows.dropdown`
-- Hover: `extended.hoverLight`
-- Text: `primary.blue`
 
 ---
 
@@ -344,48 +370,47 @@ Based on 4px grid:
 
 ### Page Backgrounds
 
-| Page          | Background                             | Notes                           |
-| ------------- | -------------------------------------- | ------------------------------- |
-| Splash        | `#faf9f5`                              | Solid cream                     |
-| Thank You     | `url('/images/SuccessMessage-bg.svg')` | SVG pattern with cream fallback |
-| Logo Download | `#faf9f5`                              | Solid cream                     |
+| Page          | Background | Notes       |
+| ------------- | ---------- | ----------- |
+| Splash        | `#f7f5ee`  | Solid cream |
+| Design System | `#f7f5ee`  | Solid cream |
 
 ### Section Backgrounds
 
-| Section            | Background    | Gradient                                             |
-| ------------------ | ------------- | ---------------------------------------------------- |
-| Header             | `#faf9f5`     | None                                                 |
-| How To Invest      | Navy gradient | `linear-gradient(to right, #1e3366 55.29%, #0f1b2d)` |
-| How To Invest Card | `#11224d`     | None                                                 |
-| Community          | `#faf9f5`     | None                                                 |
-| Footer             | Navy gradient | `linear-gradient(to right, #1e3366 55%, #0f1b2d)`    |
-
-### Decorative SVG Assets
-
-| Asset              | Path                             | Usage                              |
-| ------------------ | -------------------------------- | ---------------------------------- |
-| Header BG          | `/images/header-bg.svg`          | Background pattern for header      |
-| Header Decoration  | `/images/header-decoration.svg`  | Right-side decorative element      |
-| Steps BG           | `/images/steps-bg.svg`           | Background for HowToInvest section |
-| Chevron Decoration | `/images/chevron-decoration.svg` | Corner decoration on step cards    |
-| Footer Line        | `/images/footer-line.svg`        | Decorative line in footer          |
-| Success Message BG | `/images/SuccessMessage-bg.svg`  | Full-page background for ThankYou  |
-
-### Icons
-
-| Icon        | Path                           | Usage                     |
-| ----------- | ------------------------------ | ------------------------- |
-| File        | `/images/icon-file.svg`        | Step 1 - Review documents |
-| Credit Card | `/images/icon-credit-card.svg` | Step 2 - Complete & Fund  |
-| Phone       | `/images/icon-phone.svg`       | Step 3 - Schedule a call  |
-| Check       | `/images/check-icon.svg`       | Success badge             |
+| Section          | Background  | Notes                  |
+| ---------------- | ----------- | ---------------------- |
+| Header           | `#f7f5ee`   | Cream                  |
+| Hero             | `#f7f5ee`   | With atmospheric image |
+| Opportunity      | Image-based | Business owners photo  |
+| How To Invest    | `#243829`   | Forest green           |
+| Human Connection | `#f7f5ee`   | Cream                  |
+| Community        | Image-based | Community panorama     |
+| Footer           | `#243829`   | Forest green           |
 
 ### Brand Assets
 
-| Asset       | Path                      | Usage                     |
-| ----------- | ------------------------- | ------------------------- |
-| Logo        | `/images/logo.svg`        | Main logo (header, pages) |
-| Logo Footer | `/images/logo-footer.svg` | Smaller footer logo       |
+| Asset             | Path                            | Usage                    |
+| ----------------- | ------------------------------- | ------------------------ |
+| Typemark          | `/images/typemark.svg`          | Header logo              |
+| Typemark Footer   | `/images/typemark-footer.svg`   | Footer logo (light)      |
+| SH Monogram       | `/images/sh-monogram.svg`       | Compact brand mark       |
+| SH Footer         | `/images/sh-footer.svg`         | Footer monogram          |
+| Garland           | `/images/garland.svg`           | Decorative botanical     |
+| Garland Footer    | `/images/garland-footer.svg`    | Footer botanical (light) |
+| Botanical SH      | `/images/botanical-sh.svg`      | Botanical monogram       |
+| Botanical Garland | `/images/botanical-garland.svg` | Full botanical element   |
+| Divider           | `/images/divider.svg`           | Section dividers         |
+| Arrow Northeast   | `/images/arrow-northeast.svg`   | Step connections         |
+
+### Photography
+
+| Image                 | Path                                | Usage               |
+| --------------------- | ----------------------------------- | ------------------- |
+| Atmospheric Backdrop  | `/images/atmospheric-backdrop.png`  | Hero background     |
+| Business Owners       | `/images/business-owners.png`       | Opportunity section |
+| Personal Conversation | `/images/personal-conversation.png` | Human connection    |
+| Community Panorama    | `/images/community-panorama.png`    | Community section   |
+| Community Bridge      | `/images/community-bridge.png`      | Alternate community |
 
 ---
 
@@ -398,7 +423,7 @@ Based on 4px grid:
 | fast   | 150ms | Hover states, micro-interactions |
 | normal | 300ms | Default transitions              |
 | slow   | 600ms | Scroll reveal animations         |
-| slower | 700ms | Page entrance animations         |
+| slower | 800ms | Page entrance animations         |
 
 ### Easing Functions
 
@@ -417,22 +442,25 @@ Default settings for scroll-triggered animations:
 - **Duration:** 600ms
 - **Stagger delay:** 150ms between items
 
-### Entrance Animations
-
-| Name      | Description                        |
-| --------- | ---------------------------------- |
-| fadeUp    | Fade in while moving up            |
-| fadeDown  | Fade in while moving down          |
-| fadeLeft  | Fade in while moving from right    |
-| fadeRight | Fade in while moving from left     |
-| scaleUp   | Fade in with slight scale increase |
-
 ### Hover Effects
 
 | Name            | Effect                                |
 | --------------- | ------------------------------------- |
-| lift            | translateY(-8px) with enhanced shadow |
+| lift            | translateY(-4px) with enhanced shadow |
 | colorTransition | Smooth color changes over 200ms       |
+| scale           | scale(1.02) subtle zoom               |
+
+---
+
+## Responsive Breakpoints
+
+| Name | Width  | Usage             |
+| ---- | ------ | ----------------- |
+| sm   | 640px  | Small tablets     |
+| md   | 768px  | Tablets           |
+| lg   | 1024px | Small desktops    |
+| xl   | 1280px | Standard desktops |
+| 2xl  | 1536px | Large screens     |
 
 ---
 
@@ -443,20 +471,23 @@ Default settings for scroll-triggered animations:
 - ✅ Use design tokens for all colors, spacing, and typography
 - ✅ Follow mobile-first responsive approach
 - ✅ Maintain consistent spacing using the 4px grid
-- ✅ Use semantic color names (success, warning, error)
+- ✅ Use Times New Roman for headlines, Inter/DM Sans for body
+- ✅ Embrace the natural, earthy color palette
+- ✅ Use botanical decorations sparingly for elegance
 
 ### Don'ts
 
 - ❌ Hardcode color values
 - ❌ Use arbitrary spacing values
-- ❌ Mix font families inappropriately
+- ❌ Mix serif and sans-serif inappropriately
+- ❌ Overuse decorative elements
 - ❌ Ignore responsive breakpoints
+- ❌ Use harsh, unnatural colors
 
 ---
 
 ## Version History
 
-| Version | Date       | Changes                                                                        |
-| ------- | ---------- | ------------------------------------------------------------------------------ |
-| 1.1.0   | 2026-10-27 | Added animations, transitions, AnimatedSection, ThankYouPage, LogoDownloadPage |
-| 1.0.0   | 2026-10-26 | Initial design system setup                                                    |
+| Version | Date       | Changes                                 |
+| ------- | ---------- | --------------------------------------- |
+| 1.0.0   | 2026-10-27 | Initial SageHaven Bancorp design system |

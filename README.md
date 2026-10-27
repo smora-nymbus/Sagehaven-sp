@@ -1,32 +1,58 @@
-# React + TypeScript + Vite
+# SageHaven Bancorp — Investor Splash Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern investor-focused landing page for SageHaven Bancorp, built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** with TypeScript
+- **Vite** for fast development and builds
+- **Tailwind CSS v4** for styling
+- **React Router** for navigation
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Install dependencies
+npm install
 
-## Expanding the Oxlint configuration
+# Start development server
+npm run dev
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+# Build for production
+npm run build
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+# Preview production build
+npm run preview
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── layout/          # Header, Footer
+│   ├── sections/        # Page sections (Hero, Opportunity, HowToInvest, etc.)
+│   └── ui/              # Reusable UI components
+├── pages/               # Page components
+├── constants/           # App constants
+├── hooks/               # Custom React hooks
+└── lib/                 # Utilities
+```
+
+## Design System
+
+SageHaven uses a nature-inspired, premium banking aesthetic:
+
+### Colors
+
+- Forest Green: `#243829` / `#27382a`
+- Sage: `#3a503b`
+- Light Sage: `#e0e7dc`
+- Cream: `#f7f5ee`
+- Charcoal: `#36454f`
+- Gold Accent: `#8b6f3a`
+
+### Typography
+
+- Headlines: Times New Roman (serif)
+- Body/UI: Inter / system sans-serif

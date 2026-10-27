@@ -1,25 +1,61 @@
-import { AnimatedSection } from "../ui/AnimatedSection";
-
 export function CommunitySection() {
   return (
-    <section className="flex flex-col items-start w-full">
-      {/* Main title */}
-      <div className="bg-[#faf9f5] flex flex-col items-center pb-4 md:pb-5.75 pt-10 md:pt-14 px-5 sm:px-10 md:px-16 lg:px-20 w-full">
-        <AnimatedSection>
-          <h2 className="font-barlow font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[52px] text-[#2C4A92] text-center">
-            Built by the community for the community
-          </h2>
-        </AnimatedSection>
-      </div>
+    <section className="w-full bg-[#27382a] px-[182px] pb-[100px] pt-[120px]">
+      <div className="flex flex-col gap-16">
+        {/* Community Invitation */}
+        <div className="flex flex-col items-center gap-7">
+          {/* Label */}
+          <p className="sh-label text-[#f7f5ee]">Built around community</p>
 
-      {/* Closing message */}
-      <div className="bg-[#faf9f5] flex flex-col items-center pb-10 md:pb-13 px-5 sm:px-10 md:px-16 lg:px-20 w-full">
-        <AnimatedSection delay={150}>
-          <p className="font-garamond text-base md:text-lg lg:text-[20px] text-[#5f666e] text-center leading-normal w-full max-w-4xl">
-            Thank you for helping make Strategist Bank possible. Your commitment
-            strengthens the local business ecosystem across New Hampshire.
-          </p>
-        </AnimatedSection>
+          {/* Headline */}
+          <h2 className="sh-headline-lg w-[1000px] text-center text-[#f7f5ee]">
+            Built for the community.
+            <br />
+            Inspired by what comes next.
+          </h2>
+
+          {/* Description */}
+          <div className="w-[760px] text-center">
+            <p className="text-[20px] leading-[1.6] text-[#f7f5ee]">
+              Thank you for your interest in SageHaven Bancorp.
+              <br />
+              Take a closer look at what we're building, and the role you could
+              play in its future.
+            </p>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex gap-[14px] pt-3">
+            <a
+              href="#documents"
+              className="sh-button sh-button-primary"
+            >
+              <span>Review offering documents</span>
+              <span>→</span>
+            </a>
+            <a
+              href="#fund"
+              className="sh-button sh-button-outline text-[#f7f5ee]"
+            >
+              Fund investment
+            </a>
+            <a
+              href="#schedule"
+              className="sh-button sh-button-outline text-[#f7f5ee]"
+            >
+              Schedule a call
+            </a>
+          </div>
+        </div>
+
+        {/* Community Panorama */}
+        <div className="relative h-[400px] w-full overflow-hidden rounded-[32px]">
+          <img
+            src="/images/community-panorama.png"
+            alt="Downtown Pittsburgh panorama"
+            className="absolute left-0 top-[-27%] h-[200%] w-full object-cover"
+          />
+        </div>
       </div>
     </section>
   );

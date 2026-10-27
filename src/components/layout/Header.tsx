@@ -1,49 +1,57 @@
-import { AnimatedSection } from "../ui/AnimatedSection";
-
 export function Header() {
+  const navLinks = [
+    { label: "Overview", href: "#overview" },
+    { label: "How to invest", href: "#how-to-invest" },
+    { label: "Offering documents", href: "#documents" },
+  ];
+
   return (
-    <header className="relative bg-[#faf9f5] flex flex-col gap-6 md:gap-10 items-start pb-10 md:pb-14 pt-8 md:pt-12 px-5 sm:px-10 md:px-16 lg:px-20 overflow-hidden">
-      {/* Background decorations - hidden on mobile for cleaner look */}
-      <img
-        src="/images/header-bg.svg"
-        alt=""
-        className="hidden md:block absolute left-0 top-0 w-full max-w-360 h-auto pointer-events-none"
-        aria-hidden="true"
-      />
-      <img
-        src="/images/header-decoration.svg"
-        alt=""
-        className="hidden lg:block absolute right-0 top-0 w-auto h-full max-h-125 pointer-events-none"
-        aria-hidden="true"
-      />
+    <header className="sticky top-0 z-50 w-full border-b border-black bg-[#f7f5ee]">
+      <div className="flex h-[86px] items-center justify-between px-[182px]">
+        {/* Logo */}
+        <a href="/" className="flex items-center">
+          <div className="relative flex items-center">
+            {/* Garland + SH Monogram */}
+            <div className="relative h-[58px] w-[63px]">
+              <img
+                src="/images/garland.svg"
+                alt=""
+                className="absolute inset-0 h-full w-full"
+              />
+              <img
+                src="/images/sh-monogram.svg"
+                alt=""
+                className="absolute left-[27px] top-[9px] h-[41px] w-[37px]"
+              />
+            </div>
+            {/* Typemark */}
+            <img
+              src="/images/typemark.svg"
+              alt="SageHaven"
+              className="ml-[25px] h-[31px] w-[165px]"
+            />
+          </div>
+        </a>
 
-      {/* Logo section */}
-      <AnimatedSection
-        className="relative flex flex-col gap-2 md:gap-3 items-start w-full"
-        delay={0}
-      >
-        <img
-          src="/images/logo.svg"
-          alt="Strategist Bank"
-          className="h-12 sm:h-16 md:h-20 lg:h-23.75 w-auto"
-        />
-        <p className="font-outfit font-semibold text-[10px] md:text-[11px] uppercase tracking-wide text-[#4a934f]">
-          In organization
-        </p>
-      </AnimatedSection>
-
-      {/* Hero text */}
-      <AnimatedSection
-        className="relative flex flex-col items-center w-full"
-        delay={200}
-      >
-        <h1 className="font-barlow font-bold text-4xl sm:text-5xl md:text-6xl lg:text-[72px] text-[#11224d] text-center leading-[1.05]">
-          <span className="block">Take the next step.</span>
-          <span className="block">
-            Invest in the bank that thinks like a Business.
-          </span>
-        </h1>
-      </AnimatedSection>
+        {/* Navigation */}
+        <nav className="flex items-center gap-10">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-[15px] text-[#243829] transition-colors hover:text-[#3a503b]"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="#documents"
+            className="sh-button sh-button-outline h-[54px] border-[#243829] text-[14px] text-[#243829]"
+          >
+            Review offering
+          </a>
+        </nav>
+      </div>
     </header>
   );
 }

@@ -12,7 +12,7 @@ export function generateTokensJSON(): string {
  */
 export function generateTokensCSS(): string {
   const lines: string[] = [
-    "/* Strategist Bank Design Tokens */",
+    "/* SageHaven Bancorp Design Tokens */",
     "/* Generated from tokens.ts */",
     "",
     ":root {",
@@ -146,7 +146,7 @@ export function generateTokensCSS(): string {
  */
 export function generateTokensSCSS(): string {
   const lines: string[] = [
-    "// Strategist Bank Design Tokens",
+    "// SageHaven Bancorp Design Tokens",
     "// Generated from tokens.ts",
     "",
   ];
@@ -260,18 +260,18 @@ export async function downloadDesignSystemBundle(): Promise<void> {
   // Download tokens in various formats
   downloadFile(
     generateTokensJSON(),
-    "strategist-bank-tokens.json",
+    "sagehaven-bancorp-tokens.json",
     "application/json",
   );
 
   // Small delay between downloads to prevent browser blocking
   await new Promise((resolve) => setTimeout(resolve, 500));
-  downloadFile(generateTokensCSS(), "strategist-bank-tokens.css", "text/css");
+  downloadFile(generateTokensCSS(), "sagehaven-bancorp-tokens.css", "text/css");
 
   await new Promise((resolve) => setTimeout(resolve, 500));
   downloadFile(
     generateTokensSCSS(),
-    "strategist-bank-tokens.scss",
+    "sagehaven-bancorp-tokens.scss",
     "text/plain",
   );
 }
