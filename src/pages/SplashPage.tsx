@@ -1,14 +1,21 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { HowToInvest } from "@/components/sections/HowToInvest";
-import { CommunitySection } from "@/components/sections/CommunitySection";
+import { Header, Footer } from "@/components/layout";
+import {
+  HeroSection,
+  OpportunitySection,
+  HowToInvestSection,
+  HumanConnectionSection,
+  CommunitySection,
+} from "@/components/sections";
 
 export function SplashPage() {
   return (
-    <div className="bg-[#faf9f5] min-h-screen flex flex-col">
+    <div className="flex min-h-screen flex-col bg-[#f7f5ee]">
       <Header />
-      <main className="flex flex-col flex-1">
-        <HowToInvest />
+      <main className="flex-1">
+        <HeroSection />
+        <OpportunitySection />
+        <HowToInvestSection />
+        <HumanConnectionSection />
         <CommunitySection />
       </main>
       <Footer />
