@@ -1,8 +1,8 @@
-# SageHaven Bancorp Design System
+# Sagehaven Bancorp Design System
 
 ## Overview
 
-This design system defines the visual language and component library for SageHaven Bancorp. All components should follow these guidelines to maintain brand consistency.
+This design system defines the visual language and component library for Sagehaven Bancorp. All components should follow these guidelines to maintain brand consistency.
 
 ---
 
@@ -416,5 +416,5 @@ Based on 4px grid with specific section values:
 
 | Version | Date       | Changes                                 |
 | ------- | ---------- | --------------------------------------- |
-| 2.0.0   | 2026-10-27 | Complete redesign for SageHaven Bancorp |
+| 2.0.0   | 2026-10-27 | Complete redesign for Sagehaven Bancorp |
 | 1.0.0   | 2026-10-26 | Initial design system (StrategistBank)  |

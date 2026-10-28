@@ -300,7 +300,7 @@ export function DesignSystemPage() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
           <div>
             <h1 className="font-serif text-4xl md:text-5xl">
-              SageHaven Bancorp Design System
+              Sagehaven Bancorp Design System
             </h1>
             <p className="text-lg text-sh-cream/70 mt-3">
               Component library and design tokens for consistent brand
@@ -569,7 +569,7 @@ export function DesignSystemPage() {
   <span>Review offering documents</span>
   <span>→</span>
 </button>`}
-              prompt="Create a primary button for SageHaven with cream (#f7f5ee) background, forest (#243829) text, pill shape (rounded-full), 54px height, arrow icon. Include hover state."
+              prompt="Create a primary button for Sagehaven with cream (#f7f5ee) background, forest (#243829) text, pill shape (rounded-full), 54px height, arrow icon. Include hover state."
             >
               <div className="flex justify-center bg-sh-forest p-6 rounded-lg -mx-4 -mb-4 mt-4">
                 <PrimaryButton />
@@ -616,7 +616,7 @@ export function DesignSystemPage() {
   </div>
   <button>Review offering documents</button>
 </div>`}
-              prompt="Create a step card for SageHaven with cream background, 18px radius, step number in sage, serif title, charcoal description, and outline CTA button."
+              prompt="Create a step card for Sagehaven with cream background, 18px radius, step number in sage, serif title, charcoal description, and outline CTA button."
             >
               <div className="flex justify-center">
                 <div className="bg-sh-cream rounded-card p-5 w-full">
@@ -663,7 +663,7 @@ export function DesignSystemPage() {
               name="Section Label"
               description="Uppercase label for section headers. 14px, uppercase, with letter spacing."
               code={`<p className="text-[14px] uppercase tracking-[0.02em] text-sh-cream">
-  SageHaven Bancorp · Investor overview
+  Sagehaven Bancorp · Investor overview
 </p>`}
               prompt="Create a section label with 14px size, uppercase, 0.02em letter spacing. Can be cream on dark or forest on light."
             >
@@ -738,7 +738,7 @@ export function DesignSystemPage() {
       <footer className="bg-sh-forest text-sh-cream py-12 px-5 sm:px-10 md:px-16 lg:px-20 mt-16">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-sm opacity-70">
-            SageHaven Bancorp Design System v2.0.0
+            Sagehaven Bancorp Design System v2.0.0
           </p>
         </div>
       </footer>

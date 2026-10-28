@@ -12,7 +12,7 @@ export function generateTokensJSON(): string {
  */
 export function generateTokensCSS(): string {
   const lines: string[] = [
-    "/* SageHaven Bancorp Design Tokens */",
+    "/* Sagehaven Bancorp Design Tokens */",
     "/* Generated from tokens.ts */",
     "",
     ":root {",
@@ -146,7 +146,7 @@ export function generateTokensCSS(): string {
  */
 export function generateTokensSCSS(): string {
   const lines: string[] = [
-    "// SageHaven Bancorp Design Tokens",
+    "// Sagehaven Bancorp Design Tokens",
     "// Generated from tokens.ts",
     "",
   ];

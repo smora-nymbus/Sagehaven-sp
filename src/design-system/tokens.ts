@@ -1,7 +1,7 @@
 /**
- * SageHaven Bancorp Design Tokens
+ * Sagehaven Bancorp Design Tokens
  *
- * This file contains all design tokens for the SageHaven brand.
+ * This file contains all design tokens for the Sagehaven brand.
  * Use these tokens consistently across all components.
  */
 

@@ -1,8 +1,8 @@
-# SageHaven Bancorp Design System
+# Sagehaven Bancorp Design System
 
 ## Overview
 
-This design system defines the visual language and component library for SageHaven Bancorp. All components should follow these guidelines to maintain brand consistency.
+This design system defines the visual language and component library for Sagehaven Bancorp. All components should follow these guidelines to maintain brand consistency.
 
 ---
 
@@ -12,7 +12,7 @@ This design system defines the visual language and component library for SageHav
 
 **Voice:** Warm, trustworthy, rooted in community, sophisticated yet approachable
 
-**Brand Essence:** SageHaven represents growth, stability, and natural wisdom — combining the calming presence of sage with the security of a haven.
+**Brand Essence:** Sagehaven represents growth, stability, and natural wisdom — combining the calming presence of sage with the security of a haven.
 
 ---
 
@@ -490,4 +490,4 @@ Default settings for scroll-triggered animations:
 
 | Version | Date       | Changes                                 |
 | ------- | ---------- | --------------------------------------- |
-| 1.0.0   | 2026-10-27 | Initial SageHaven Bancorp design system |
+| 1.0.0   | 2026-10-27 | Initial Sagehaven Bancorp design system |
