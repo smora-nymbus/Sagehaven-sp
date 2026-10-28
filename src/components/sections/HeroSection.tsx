@@ -16,7 +16,7 @@ export function HeroSection() {
         <div className="flex flex-col gap-5 md:gap-7 lg:w-157.5 lg:shrink-0">
           {/* Label */}
           <p className="sh-label text-sh-cream">
-            SageHaven Bancorp · Investor overview
+            Sagehaven Bancorp · Investor overview
           </p>
 
           {/* Headline */}

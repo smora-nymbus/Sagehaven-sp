@@ -33,7 +33,7 @@ export function Footer() {
               {/* Typemark */}
               <img
                 src="/images/typemark-footer.svg"
-                alt="SageHaven"
+                alt="Sagehaven"
                 className="ml-4 mt-2.5 h-6 w-32 sm:ml-6 sm:mt-3.25 sm:h-7.5 sm:w-40.5"
               />
             </div>
@@ -41,7 +41,7 @@ export function Footer() {
             {/* Tagline */}
             <p className="max-w-[290px] text-sm leading-relaxed text-sh-cream sm:text-[14px] sm:leading-[1.6] lg:w-72.5">
               Built for business. Grounded in relationships. Explore the next
-              chapter with SageHaven Bancorp.
+              chapter with Sagehaven Bancorp.
             </p>
           </div>
 
@@ -98,10 +98,10 @@ export function Footer() {
         {/* Copyright */}
         <div className="flex flex-col gap-2 pt-2 sm:flex-row sm:items-center sm:justify-between sm:pt-2.5">
           <p className="text-xs text-sh-cream sm:text-[13px]">
-            © 2026 SageHaven Bancorp. All rights reserved.
+            © 2026 Sagehaven Bancorp. All rights reserved.
           </p>
           <p className="text-sm text-sh-cream sm:text-lg lg:text-[20px]">
-            SageHaven Bancorp · Investors
+            Sagehaven Bancorp · Investors
           </p>
         </div>
       </div>

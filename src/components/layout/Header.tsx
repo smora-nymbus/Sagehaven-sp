@@ -31,7 +31,7 @@ export function Header() {
             {/* Typemark - hidden on small mobile */}
             <img
               src="/images/typemark.svg"
-              alt="SageHaven"
+              alt="Sagehaven"
               className="ml-4 hidden h-6 w-32 sm:block lg:ml-6.25 lg:h-7.75 lg:w-41.25"
             />
           </div>

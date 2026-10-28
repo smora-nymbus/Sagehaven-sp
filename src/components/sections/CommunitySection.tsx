@@ -18,7 +18,7 @@ export function CommunitySection() {
           {/* Description */}
           <div className="max-w-2xl lg:w-190">
             <p className="text-base leading-relaxed text-sh-cream sm:text-lg md:text-xl md:leading-[1.6]">
-              Thank you for your interest in SageHaven Bancorp.
+              Thank you for your interest in Sagehaven Bancorp.
               <br className="hidden md:block" />
               <span className="md:hidden"> </span>
               Take a closer look at what we're building, and the role you could

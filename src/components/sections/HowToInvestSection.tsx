@@ -22,7 +22,7 @@ export function HowToInvestSection() {
       number: "03",
       title: "Speak to the team",
       description:
-        "Have questions before you make a commitment? Schedule a conversation with the SageHaven team to discuss the offering and walk through the process.",
+        "Have questions before you make a commitment? Schedule a conversation with the Sagehaven team to discuss the offering and walk through the process.",
       cta: "Schedule a call",
       href: "#schedule",
       hasArrow: false,
@@ -46,12 +46,12 @@ export function HowToInvestSection() {
           </p>
         </div>
 
-        {/* Step Cards */}
-        <div className="flex flex-col gap-4 sm:gap-5 md:flex-row md:gap-6 lg:h-105">
+        {/* Step Cards - stack on mobile/tablet, row on desktop */}
+        <div className="flex flex-col gap-4 sm:gap-5 lg:flex-row lg:gap-6 lg:h-105">
           {steps.map((step) => (
             <div
               key={step.number}
-              className="flex flex-col justify-between rounded-xl bg-sh-cream p-5 sm:rounded-2xl sm:p-6 md:flex-1 md:min-w-0 lg:rounded-card lg:p-7.5"
+              className="flex flex-col justify-between rounded-xl bg-sh-cream p-5 sm:rounded-2xl sm:p-6 lg:flex-1 lg:min-w-0 lg:rounded-card lg:p-7.5"
             >
               {/* Step Content */}
               <div className="flex flex-col gap-4 md:gap-5 lg:gap-6">
@@ -66,7 +66,7 @@ export function HowToInvestSection() {
                 </h3>
 
                 {/* Step Description */}
-                <p className="text-sm leading-relaxed text-sh-charcoal sm:text-base md:text-[18px] md:leading-[1.65]">
+                <p className="text-sm leading-relaxed text-sh-charcoal sm:text-base lg:text-[18px] lg:leading-[1.65]">
                   {step.description}
                 </p>
               </div>
@@ -74,7 +74,7 @@ export function HowToInvestSection() {
               {/* CTA Button */}
               <a
                 href={step.href}
-                className="sh-button sh-button-outline mt-6 inline-flex w-full justify-center border-sh-sage text-sh-sage sm:w-fit sm:justify-start md:mt-8"
+                className="sh-button sh-button-outline mt-6 inline-flex w-full justify-center border-sh-sage text-sh-sage sm:w-fit sm:justify-start lg:mt-8"
               >
                 <span>{step.cta}</span>
                 {step.hasArrow && <span>→</span>}

@@ -17,7 +17,7 @@ export function OpportunitySection() {
 
           {/* Right: Description */}
           <p className="text-base leading-relaxed text-sh-charcoal sm:text-lg md:text-[18px] md:leading-[1.65] lg:w-142.75">
-            SageHaven combines business banking and private banking with a
+            Sagehaven combines business banking and private banking with a
             banker who knows you. Accounts, payments, and treasury tools help
             you manage your company's day-to-day finances, while personal
             banking services address your needs outside the business. The
@@ -57,7 +57,7 @@ export function OpportunitySection() {
 
               {/* Footer - hidden on smallest screens */}
               <p className="hidden text-[11px] font-medium text-sh-gold sm:block lg:text-[12px]">
-                SageHaven Bancorp
+                Sagehaven Bancorp
               </p>
             </div>
           </div>

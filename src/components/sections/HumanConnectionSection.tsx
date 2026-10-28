@@ -6,7 +6,7 @@ export function HumanConnectionSection() {
         <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-2xl sm:h-80 md:h-96 lg:h-112.5 lg:w-130 lg:rounded-[32px]">
           <img
             src="/images/personal-conversation.png"
-            alt="Personal conversation with SageHaven banker"
+            alt="Personal conversation with Sagehaven banker"
             className="absolute inset-0 h-full w-full object-cover object-center lg:left-[-42%] lg:top-[-14%] lg:h-[129%] lg:w-[167%] lg:max-w-none"
           />
         </div>
