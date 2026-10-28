@@ -3,11 +3,11 @@ export function HumanConnectionSection() {
     <section className="w-full bg-sh-sage-light px-5 py-12 sm:px-8 sm:py-16 md:px-12 md:py-20 lg:px-section-x lg:py-section-y">
       <div className="flex flex-col gap-8 md:gap-12 lg:flex-row lg:items-center lg:gap-20">
         {/* Left: Personal Conversation Image */}
-        <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-2xl sm:h-80 md:h-96 lg:h-112.5 lg:w-130 lg:rounded-[32px]">
+        <div className="sh-image-container relative h-64 w-full shrink-0 overflow-hidden rounded-2xl sm:h-80 md:h-96 lg:h-112.5 lg:w-130 lg:rounded-[32px]">
           <img
             src="/images/personal-conversation.png"
             alt="Personal conversation with Sagehaven banker"
-            className="absolute inset-0 h-full w-full object-cover object-center lg:left-[-42%] lg:top-[-14%] lg:h-[129%] lg:w-[167%] lg:max-w-none"
+            className="sh-image-hover absolute inset-0 h-full w-full object-cover object-center lg:left-[-42%] lg:top-[-14%] lg:h-[129%] lg:w-[167%] lg:max-w-none"
           />
         </div>
 
@@ -47,7 +47,7 @@ export function HumanConnectionSection() {
           {/* CTA */}
           <a
             href="#schedule"
-            className="sh-button sh-button-outline mt-2 w-full justify-center border-sh-forest text-sh-forest sm:w-fit"
+            className="sh-button sh-button-outline sh-button-outline-dark mt-2 w-full justify-center border-sh-forest text-sh-forest sm:w-fit"
           >
             Talk to the team
           </a>

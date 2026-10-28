@@ -48,20 +48,21 @@ export function HowToInvestSection() {
 
         {/* Step Cards - stack on mobile/tablet, row on desktop */}
         <div className="flex flex-col gap-4 sm:gap-5 lg:flex-row lg:gap-6 lg:h-105">
-          {steps.map((step) => (
+          {steps.map((step, index) => (
             <div
               key={step.number}
-              className="flex flex-col justify-between rounded-xl bg-sh-cream p-5 sm:rounded-2xl sm:p-6 lg:flex-1 lg:min-w-0 lg:rounded-card lg:p-7.5"
+              className="group flex flex-col justify-between rounded-xl bg-sh-cream p-5 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] sm:rounded-2xl sm:p-6 lg:flex-1 lg:min-w-0 lg:rounded-card lg:p-7.5"
+              style={{ transitionDelay: `${index * 50}ms` }}
             >
               {/* Step Content */}
               <div className="flex flex-col gap-4 md:gap-5 lg:gap-6">
                 {/* Step Number */}
-                <p className="text-xl text-sh-sage sm:text-2xl lg:text-[26px]">
+                <p className="text-xl text-sh-sage transition-colors duration-300 group-hover:text-sh-forest sm:text-2xl lg:text-[26px]">
                   {step.number}
                 </p>
 
                 {/* Step Title */}
-                <h3 className="font-serif text-xl text-sh-sage sm:text-2xl lg:text-[30px] lg:leading-[1.08]">
+                <h3 className="font-serif text-xl text-sh-sage transition-colors duration-300 group-hover:text-sh-forest sm:text-2xl lg:text-[30px] lg:leading-[1.08]">
                   {step.title}
                 </h3>
 
@@ -74,10 +75,14 @@ export function HowToInvestSection() {
               {/* CTA Button */}
               <a
                 href={step.href}
-                className="sh-button sh-button-outline mt-6 inline-flex w-full justify-center border-sh-sage text-sh-sage sm:w-fit sm:justify-start lg:mt-8"
+                className="sh-button sh-button-outline mt-6 inline-flex w-full justify-center border-sh-sage text-sh-sage transition-all duration-300 hover:border-sh-forest hover:bg-sh-forest hover:text-sh-cream sm:w-fit sm:justify-start lg:mt-8"
               >
                 <span>{step.cta}</span>
-                {step.hasArrow && <span>→</span>}
+                {step.hasArrow && (
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                )}
               </a>
             </div>
           ))}

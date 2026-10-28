@@ -54,7 +54,7 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-sh-cream transition-colors hover:text-white/80 sm:text-[14.5px]"
+                  className="sh-footer-link inline-block w-fit text-sm text-sh-cream hover:text-white sm:text-[14.5px]"
                 >
                   {link.label}
                 </a>
@@ -68,7 +68,7 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-sh-cream transition-colors hover:text-white/80 sm:text-[14.5px]"
+                  className="sh-footer-link inline-block w-fit text-sm text-sh-cream hover:text-white sm:text-[14.5px]"
                 >
                   {link.label}
                 </a>

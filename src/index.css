@@ -152,8 +152,10 @@ body {
   font-size: 16px;
   font-weight: 400;
   white-space: nowrap;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .sh-button-primary {
@@ -164,6 +166,13 @@ body {
 
 .sh-button-primary:hover {
   background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sh-button-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sh-button-outline {
@@ -173,6 +182,97 @@ body {
 
 .sh-button-outline:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sh-button-outline:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark background button outline variant */
+.sh-button-outline-dark:hover {
+  background-color: var(--color-sh-forest);
+  border-color: var(--color-sh-forest);
+  color: var(--color-sh-cream);
+}
+
+/* Nav Link Hover Animation */
+.sh-nav-link {
+  position: relative;
+}
+
+.sh-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sh-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Footer Link Hover */
+.sh-footer-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.sh-footer-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sh-footer-link:hover::after {
+  width: 100%;
+}
+
+/* Image Hover Zoom */
+.sh-image-hover {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sh-image-container:hover .sh-image-hover {
+  transform: scale(1.05);
+}
+
+/* Glassmorphic Card Hover */
+.sh-glass-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sh-glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Arrow Animation */
+.sh-arrow-animate {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .sh-arrow-animate {
+  transform: translateX(4px);
+}
+
+.sh-arrow-diagonal-animate {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .sh-arrow-diagonal-animate {
+  transform: translate(3px, -3px);
 }
 
 /* Section Padding */

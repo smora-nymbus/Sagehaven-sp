@@ -43,14 +43,14 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[15px] text-sh-forest transition-colors hover:text-sh-sage"
+              className="sh-nav-link text-[15px] text-sh-forest transition-colors hover:text-sh-sage"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#documents"
-            className="sh-button sh-button-outline h-13.5 border-sh-forest text-[14px] text-sh-forest"
+            className="sh-button sh-button-outline sh-button-outline-dark h-13.5 border-sh-forest text-[14px] text-sh-forest"
           >
             Review offering
           </a>

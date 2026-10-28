@@ -27,16 +27,16 @@ export function OpportunitySection() {
         </div>
 
         {/* Bottom: Editorial Image with Overlay */}
-        <div className="relative h-64 w-full overflow-hidden rounded-2xl sm:h-80 md:h-96 lg:h-105 lg:rounded-[32px]">
+        <div className="sh-image-container relative h-64 w-full overflow-hidden rounded-2xl sm:h-80 md:h-96 lg:h-105 lg:rounded-[32px]">
           {/* Background Image */}
           <img
             src="/images/business-owners.png"
             alt="Business owners looking ahead"
-            className="absolute inset-0 h-full w-full object-cover object-top lg:left-0 lg:top-[-62%] lg:h-[190%] lg:object-center"
+            className="sh-image-hover absolute inset-0 h-full w-full object-cover object-top lg:left-0 lg:top-[-62%] lg:h-[190%] lg:object-center"
           />
 
           {/* Glassmorphic Overlay Card - Hidden on mobile, shown on md+ */}
-          <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-white/90 p-4 shadow-lg backdrop-blur-[9px] sm:bottom-6 sm:left-6 sm:right-auto sm:w-80 sm:rounded-2xl sm:p-5 md:bottom-8 md:left-8 md:w-96 md:p-6 lg:bottom-29.25 lg:left-22 lg:w-105 lg:rounded-[20px] lg:p-7">
+          <div className="sh-glass-card absolute bottom-4 left-4 right-4 rounded-xl bg-white/90 p-4 shadow-lg backdrop-blur-[9px] sm:bottom-6 sm:left-6 sm:right-auto sm:w-80 sm:rounded-2xl sm:p-5 md:bottom-8 md:left-8 md:w-96 md:p-6 lg:bottom-29.25 lg:left-22 lg:w-105 lg:rounded-[20px] lg:p-7">
             <div className="flex flex-col gap-3 lg:gap-4">
               {/* Label Badge */}
               <div className="inline-flex w-fit items-center gap-1.5 rounded-full bg-sh-gold-light px-2 py-1 lg:px-2.5 lg:py-1.25">

@@ -35,10 +35,10 @@ export function HeroSection() {
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-3.5">
               <a
                 href="#documents"
-                className="sh-button sh-button-primary w-full justify-center sm:w-auto"
+                className="sh-button sh-button-primary group w-full justify-center sm:w-auto"
               >
                 <span>Review offering documents</span>
-                <span>→</span>
+                <span className="sh-arrow-animate">→</span>
               </a>
               <a
                 href="#fund"
@@ -51,24 +51,26 @@ export function HeroSection() {
             {/* Call invitation */}
             <a
               href="#schedule"
-              className="group inline-flex items-center gap-2 text-[14px] text-sh-cream sm:text-[16px]"
+              className="group inline-flex items-center gap-2 text-[14px] text-sh-cream transition-colors hover:text-white sm:text-[16px]"
             >
-              <span>Prefer a conversation first? Schedule a call</span>
+              <span className="sh-nav-link">
+                Prefer a conversation first? Schedule a call
+              </span>
               <img
                 src="/images/arrow-northeast.svg"
                 alt=""
-                className="h-2.5 w-2.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                className="sh-arrow-diagonal-animate h-2.5 w-2.5"
               />
             </a>
           </div>
         </div>
 
         {/* Right: Bridge image */}
-        <div className="relative h-64 w-full overflow-hidden rounded-2xl sm:h-80 md:h-96 lg:min-h-147.5 lg:flex-1 lg:rounded-[32px]">
+        <div className="sh-image-container relative h-64 w-full overflow-hidden rounded-2xl sm:h-80 md:h-96 lg:min-h-147.5 lg:flex-1 lg:rounded-[32px]">
           <img
             src="/images/community-bridge.png"
             alt="Pittsburgh bridge connecting community"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="sh-image-hover absolute inset-0 h-full w-full object-cover"
           />
         </div>
       </div>
