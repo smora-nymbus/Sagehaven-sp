@@ -9,7 +9,7 @@ import {
 
 export function SplashPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#f7f5ee]">
+    <div className="flex min-h-screen flex-col bg-sh-cream">
       <Header />
       <main className="flex-1">
         <HeroSection />

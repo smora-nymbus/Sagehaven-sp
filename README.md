@@ -1,6 +1,6 @@
-# SageHaven Bancorp — Investor Splash Page
+# Sagehaven Bancorp — Investor Splash Page
 
-A modern investor-focused landing page for SageHaven Bancorp, built with React, TypeScript, and Tailwind CSS.
+A modern investor-focused landing page for Sagehaven Bancorp, built with React, TypeScript, and Tailwind CSS.
 
 ## Tech Stack
 
@@ -41,7 +41,7 @@ src/
 
 ## Design System
 
-SageHaven uses a nature-inspired, premium banking aesthetic:
+Sagehaven uses a nature-inspired, premium banking aesthetic:
 
 ### Colors
 
