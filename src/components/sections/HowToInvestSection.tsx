@@ -51,7 +51,7 @@ export function HowToInvestSection() {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className="group flex flex-col justify-between rounded-xl bg-sh-cream p-5 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] sm:rounded-2xl sm:p-6 lg:flex-1 lg:min-w-0 lg:rounded-card lg:p-7.5"
+              className="group flex flex-col justify-between rounded-xl bg-sh-cream p-5 transition-all duration-300 ease-out hover:-translate-y-2 sm:rounded-2xl sm:p-6 lg:flex-1 lg:min-w-0 lg:rounded-card lg:p-7.5"
               style={{ transitionDelay: `${index * 50}ms` }}
             >
               {/* Step Content */}
@@ -75,7 +75,7 @@ export function HowToInvestSection() {
               {/* CTA Button */}
               <a
                 href={step.href}
-                className="sh-button sh-button-outline mt-6 inline-flex w-full justify-center border-sh-sage text-sh-sage transition-all duration-300 hover:border-sh-forest hover:bg-sh-forest hover:text-sh-cream sm:w-fit sm:justify-start lg:mt-8"
+                className="mt-6 inline-flex h-13.5 w-full items-center justify-center gap-3.5 rounded-full border border-sh-sage px-7 text-base text-sh-sage transition-colors duration-300 hover:border-sh-forest hover:bg-sh-forest/10 hover:text-sh-forest sm:w-fit sm:justify-start lg:mt-8"
               >
                 <span>{step.cta}</span>
                 {step.hasArrow && (

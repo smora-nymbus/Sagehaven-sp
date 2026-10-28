@@ -47,7 +47,7 @@ export function HumanConnectionSection() {
           {/* CTA */}
           <a
             href="#schedule"
-            className="sh-button sh-button-outline sh-button-outline-dark mt-2 w-full justify-center border-sh-forest text-sh-forest sm:w-fit"
+            className="mt-2 inline-flex h-13.5 w-full items-center justify-center gap-3.5 rounded-full border border-sh-forest px-7 text-base text-sh-forest transition-all duration-300 hover:-translate-y-0.5 hover:bg-sh-forest/10 sm:w-fit"
           >
             Talk to the team
           </a>
