@@ -55,4 +55,4 @@ Sagehaven uses a nature-inspired, premium banking aesthetic:
 ### Typography
 
 - Headlines: Times New Roman (serif)
-- Body/UI: Inter / system sans-serif
+- Body/UI: Omnes (Adobe Fonts)

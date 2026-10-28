@@ -3,11 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* SageHaven Design Tokens */
+/* Sagehaven Design Tokens */
 @theme inline {
   /* Typography */
   --font-family-serif: "Times New Roman", "Georgia", serif;
-  --font-family-sans: "Inter", "DM Sans", system-ui, sans-serif;
+  --font-family-sans: "omnes", system-ui, sans-serif;
 
   /* SageHaven Color Palette */
   --color-sh-forest: #243829;
@@ -57,7 +57,7 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: "Inter", "DM Sans", system-ui, sans-serif;
+  font-family: "omnes", system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -70,7 +70,7 @@ body {
 }
 
 .font-sans {
-  font-family: "Inter", "DM Sans", system-ui, sans-serif;
+  font-family: "omnes", system-ui, sans-serif;
 }
 
 /* SageHaven Heading Styles */

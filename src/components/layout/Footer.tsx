@@ -39,7 +39,7 @@ export function Footer() {
             </div>
 
             {/* Tagline */}
-            <p className="max-w-[290px] text-sm leading-relaxed text-sh-cream sm:text-[14px] sm:leading-[1.6] lg:w-72.5">
+            <p className="max-w-72.5 text-sm leading-relaxed text-sh-cream sm:text-[14px] sm:leading-[1.6] lg:w-72.5">
               Built for business. Grounded in relationships. Explore the next
               chapter with Sagehaven Bancorp.
             </p>
