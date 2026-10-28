@@ -9,16 +9,16 @@ export function Footer() {
   const connectLinks = [{ label: "Talk to the team", href: "#schedule" }];
 
   return (
-    <footer className="w-full bg-black px-section-x pb-10 pt-20">
-      <div className="flex flex-col gap-10">
+    <footer className="w-full bg-black px-5 pb-8 pt-12 sm:px-8 sm:pb-10 sm:pt-16 md:px-12 lg:px-section-x lg:pt-20">
+      <div className="flex flex-col gap-8 sm:gap-10">
         {/* Footer Directory */}
-        <div className="flex gap-16 pb-6">
+        <div className="flex flex-col gap-10 pb-4 sm:pb-6 md:flex-row md:gap-12 lg:gap-16">
           {/* Brand Introduction */}
-          <div className="flex w-85 shrink-0 flex-col gap-6">
+          <div className="flex flex-col gap-5 sm:gap-6 md:w-72 md:shrink-0 lg:w-85">
             {/* Logo */}
             <div className="relative inline-flex items-start">
               {/* Garland + SH Monogram */}
-              <div className="relative h-14.25 w-15.5">
+              <div className="relative h-12 w-13 sm:h-14.25 sm:w-15.5">
                 <img
                   src="/images/garland-footer.svg"
                   alt=""
@@ -27,50 +27,53 @@ export function Footer() {
                 <img
                   src="/images/sh-footer.svg"
                   alt=""
-                  className="absolute left-[26.5px] top-2.25 h-10 w-[36.5px]"
+                  className="absolute left-[43%] top-[16%] h-[70%] w-[59%]"
                 />
               </div>
               {/* Typemark */}
               <img
                 src="/images/typemark-footer.svg"
                 alt="SageHaven"
-                className="ml-6 mt-3.25 h-7.5 w-40.5"
+                className="ml-4 mt-2.5 h-6 w-32 sm:ml-6 sm:mt-3.25 sm:h-7.5 sm:w-40.5"
               />
             </div>
 
             {/* Tagline */}
-            <p className="w-72.5 text-[14px] leading-[1.6] text-sh-cream">
+            <p className="max-w-[290px] text-sm leading-relaxed text-sh-cream sm:text-[14px] sm:leading-[1.6] lg:w-72.5">
               Built for business. Grounded in relationships. Explore the next
               chapter with SageHaven Bancorp.
             </p>
           </div>
 
-          {/* Investors Column */}
-          <div className="flex flex-1 flex-col gap-5">
-            <p className="sh-label-sm text-sh-cream">Investors</p>
-            {investorsLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-[14.5px] text-sh-cream transition-colors hover:text-white/80"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+          {/* Links Columns - side by side on mobile */}
+          <div className="flex flex-1 gap-8 sm:gap-12 md:gap-16">
+            {/* Investors Column */}
+            <div className="flex flex-1 flex-col gap-4 sm:gap-5">
+              <p className="sh-label-sm text-sh-cream">Investors</p>
+              {investorsLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-sh-cream transition-colors hover:text-white/80 sm:text-[14.5px]"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
 
-          {/* Connect Column */}
-          <div className="flex flex-1 flex-col gap-5">
-            <p className="sh-label-sm text-sh-cream">Connect</p>
-            {connectLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-[14.5px] text-sh-cream transition-colors hover:text-white/80"
-              >
-                {link.label}
-              </a>
-            ))}
+            {/* Connect Column */}
+            <div className="flex flex-1 flex-col gap-4 sm:gap-5">
+              <p className="sh-label-sm text-sh-cream">Connect</p>
+              {connectLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-sh-cream transition-colors hover:text-white/80 sm:text-[14.5px]"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -78,12 +81,12 @@ export function Footer() {
         <div className="h-px w-full bg-[rgba(247,245,237,0.16)]" />
 
         {/* Investment Disclosures */}
-        <div className="flex flex-col gap-4.5">
-          <p className="text-[16px] leading-normal text-sh-cream">
+        <div className="flex flex-col gap-3 sm:gap-4.5">
+          <p className="text-sm leading-relaxed text-sh-cream sm:text-base sm:leading-normal">
             An investment is not a bank deposit. It is not FDIC insured and
             involves risk of capital loss.
           </p>
-          <p className="text-[13px] leading-[1.7] text-sh-cream">
+          <p className="text-xs leading-relaxed text-sh-cream sm:text-[13px] sm:leading-[1.7]">
             This page is for general information only and is not an offer to
             sell or a solicitation of an offer to buy securities. Any offering
             is made solely through the official offering documents. Review those
@@ -93,11 +96,11 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="flex items-center justify-between pt-2.5">
-          <p className="text-[13px] text-sh-cream">
+        <div className="flex flex-col gap-2 pt-2 sm:flex-row sm:items-center sm:justify-between sm:pt-2.5">
+          <p className="text-xs text-sh-cream sm:text-[13px]">
             © 2026 SageHaven Bancorp. All rights reserved.
           </p>
-          <p className="text-[20px] text-sh-cream">
+          <p className="text-sm text-sh-cream sm:text-lg lg:text-[20px]">
             SageHaven Bancorp · Investors
           </p>
         </div>

@@ -1,20 +1,20 @@
 export function HumanConnectionSection() {
   return (
-    <section className="w-full bg-sh-sage-light px-section-x py-section-y">
-      <div className="flex items-center gap-20">
+    <section className="w-full bg-sh-sage-light px-5 py-12 sm:px-8 sm:py-16 md:px-12 md:py-20 lg:px-section-x lg:py-section-y">
+      <div className="flex flex-col gap-8 md:gap-12 lg:flex-row lg:items-center lg:gap-20">
         {/* Left: Personal Conversation Image */}
-        <div className="relative h-112.5 w-130 shrink-0 overflow-hidden rounded-[32px]">
+        <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-2xl sm:h-80 md:h-96 lg:h-112.5 lg:w-130 lg:rounded-[32px]">
           <img
             src="/images/personal-conversation.png"
             alt="Personal conversation with SageHaven banker"
-            className="absolute left-[-42%] top-[-14%] h-[129%] w-[167%] max-w-none object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-center lg:left-[-42%] lg:top-[-14%] lg:h-[129%] lg:w-[167%] lg:max-w-none"
           />
         </div>
 
         {/* Right: Content */}
-        <div className="flex flex-1 flex-col gap-6.5">
-          {/* Botanical Monogram */}
-          <div className="relative h-14.5 w-16">
+        <div className="flex flex-1 flex-col gap-4 md:gap-5 lg:gap-6.5">
+          {/* Botanical Monogram - smaller on mobile */}
+          <div className="relative h-10 w-12 sm:h-12 sm:w-14 lg:h-14.5 lg:w-16">
             <img
               src="/images/botanical-garland.svg"
               alt=""
@@ -33,12 +33,12 @@ export function HumanConnectionSection() {
           </p>
 
           {/* Headline */}
-          <h2 className="sh-headline-md w-109.5 text-sh-forest">
+          <h2 className="font-serif text-3xl leading-[1.1] text-sh-forest sm:text-4xl md:text-5xl lg:w-109.5 lg:text-[52px] lg:leading-[1.08]">
             A human connection at every step.
           </h2>
 
           {/* Description */}
-          <p className="sh-body-md text-sh-charcoal">
+          <p className="text-base leading-relaxed text-sh-charcoal sm:text-lg md:text-[18px] md:leading-[1.65]">
             Investing should feel personal, not transactional. Our team is here
             to answer your questions, explain the process and help you
             understand the decision in front of you.
@@ -47,7 +47,7 @@ export function HumanConnectionSection() {
           {/* CTA */}
           <a
             href="#schedule"
-            className="sh-button sh-button-outline w-fit border-sh-forest text-sh-forest"
+            className="sh-button sh-button-outline mt-2 w-full justify-center border-sh-forest text-sh-forest sm:w-fit"
           >
             Talk to the team
           </a>
