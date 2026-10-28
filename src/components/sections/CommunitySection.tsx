@@ -1,6 +1,6 @@
 export function CommunitySection() {
   return (
-    <section className="w-full bg-sh-forest-deep px-5 py-12 sm:px-8 sm:py-16 md:px-12 md:py-20 lg:px-section-x lg:pb-25 lg:pt-section-y">
+    <section className="flex min-h-screen w-full flex-col justify-center bg-sh-forest-deep px-5 py-12 sm:px-8 sm:py-16 md:px-12 md:py-20 lg:px-section-x lg:py-27.5">
       <div className="flex flex-col gap-10 md:gap-16">
         {/* Community Invitation */}
         <div className="flex flex-col items-center gap-5 text-center md:gap-7">
@@ -51,11 +51,11 @@ export function CommunitySection() {
         </div>
 
         {/* Community Panorama */}
-        <div className="sh-image-container relative h-48 w-full overflow-hidden rounded-2xl sm:h-64 md:h-80 lg:h-100 lg:rounded-[32px]">
+        <div className="sh-image-container relative h-56 w-full overflow-hidden rounded-2xl sm:h-72 md:h-96 lg:h-120 lg:rounded-[32px]">
           <img
-            src="/images/business-owners.png"
+            src="/images/community-panorama.png"
             alt="Downtown Pittsburgh panorama"
-            className="sh-image-hover absolute inset-0 h-full w-full object-cover object-center lg:left-0 lg:top-[-25%] lg:h-[150%]"
+            className="sh-image-hover absolute inset-0 h-full w-full object-cover object-center lg:left-0 lg:top-[-27%] lg:h-[200%]"
           />
         </div>
       </div>

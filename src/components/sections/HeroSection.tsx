@@ -1,6 +1,6 @@
 export function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-sh-forest">
+    <section className="relative min-h-screen w-full overflow-hidden bg-sh-forest">
       {/* Atmospheric backdrop */}
       <div className="absolute inset-0 h-full w-full opacity-[0.08] lg:h-212.5">
         <img
@@ -11,7 +11,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative flex flex-col gap-8 px-5 py-12 sm:px-8 md:gap-12 md:px-12 md:py-16 lg:flex-row lg:items-center lg:gap-14 lg:px-section-x lg:py-27.5">
+      <div className="relative flex min-h-screen flex-col gap-8 px-5 py-12 sm:px-8 md:gap-12 md:px-12 md:py-16 lg:flex-row lg:items-center lg:gap-14 lg:px-section-x lg:py-27.5">
         {/* Left: Text content */}
         <div className="flex flex-col gap-5 md:gap-7 lg:w-157.5 lg:shrink-0">
           {/* Label */}
