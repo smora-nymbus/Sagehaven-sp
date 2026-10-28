@@ -27,12 +27,12 @@ export function OpportunitySection() {
         </div>
 
         {/* Bottom: Editorial Image with Overlay */}
-        <div className="sh-image-container relative h-64 w-full overflow-hidden rounded-2xl sm:h-80 md:h-96 lg:h-105 lg:rounded-[32px]">
+        <div className="sh-image-container relative h-72 w-full overflow-hidden rounded-2xl sm:h-96 md:h-112 lg:h-125 lg:rounded-[32px]">
           {/* Background Image */}
           <img
-            src="/images/community-panorama.png"
+            src="/images/business-owners.png"
             alt="Business owners looking ahead"
-            className="sh-image-hover absolute inset-0 h-full w-full object-cover object-top lg:left-0 lg:top-[-35%] lg:h-[190%] lg:object-center"
+            className="sh-image-hover absolute inset-0 h-full w-full object-cover object-top lg:left-0 lg:top-[-62%] lg:h-[190%] lg:object-center"
           />
 
           {/* Glassmorphic Overlay Card - Hidden on mobile, shown on md+ */}

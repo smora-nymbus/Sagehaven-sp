@@ -60,6 +60,7 @@ body {
   font-family: "omnes", system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  text-wrap: pretty;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -239,13 +240,13 @@ body {
   width: 100%;
 }
 
-/* Image Hover Zoom */
+/* Image Hover Zoom - disabled */
 .sh-image-hover {
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sh-image-container:hover .sh-image-hover {
-  transform: scale(1.05);
+  /* zoom disabled */
 }
 
 /* Glassmorphic Card Hover */
