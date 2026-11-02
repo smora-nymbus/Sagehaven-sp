@@ -53,9 +53,9 @@ export function CommunitySection() {
         {/* Community Panorama */}
         <div className="sh-image-container relative h-56 w-full overflow-hidden rounded-2xl sm:h-72 md:h-96 lg:h-120 lg:rounded-[32px]">
           <img
-            src="/images/community-panorama.png"
-            alt="Downtown Pittsburgh panorama"
-            className="sh-image-hover absolute inset-0 h-full w-full object-cover object-center lg:left-0 lg:top-[-27%] lg:h-[200%]"
+            src="/images/business-owners.png"
+            alt="Business owners looking ahead"
+            className="sh-image-hover absolute inset-0 h-full w-full object-cover object-[center_65%]"
           />
         </div>
       </div>

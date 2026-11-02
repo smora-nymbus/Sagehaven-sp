@@ -16,7 +16,7 @@ export function OpportunitySection() {
           </div>
 
           {/* Right: Description */}
-          <p className="text-base leading-relaxed text-sh-charcoal sm:text-lg md:text-[18px] md:leading-[1.65] lg:w-142.75">
+          <p className="text-base leading-relaxed text-sh-charcoal sm:text-lg md:text-[18px] md:leading-[1.65] lg:flex-1">
             Sagehaven combines business banking and private banking with a
             banker who knows you. Accounts, payments, and treasury tools help
             you manage your company's day-to-day finances, while personal
@@ -30,9 +30,9 @@ export function OpportunitySection() {
         <div className="sh-image-container relative h-72 w-full overflow-hidden rounded-2xl sm:h-96 md:h-112 lg:h-125 lg:rounded-[32px]">
           {/* Background Image */}
           <img
-            src="/images/business-owners.png"
-            alt="Business owners looking ahead"
-            className="sh-image-hover absolute inset-0 h-full w-full object-cover object-top lg:left-0 lg:top-[-62%] lg:h-[190%] lg:object-center"
+            src="/images/community-panorama.png"
+            alt="Professional at work"
+            className="sh-image-hover absolute inset-0 h-full w-full object-cover object-[center_30%]"
           />
 
           {/* Glassmorphic Overlay Card - Hidden on mobile, shown on md+ */}
